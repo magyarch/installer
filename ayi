@@ -2316,14 +2316,14 @@ install_run() {
         echo "end base"
     elif [ "$kern" = "linux-lts" ]
     then
-        pacstrap /mnt  base base-devel linux-lts linux-firmware git
+        pacstrap /mnt base base-devel linux-lts linux-firmware git
     fi
 
     # Added repo.
 
     cp /etc/pacman.d/mirrorlist /mnt/etc/pacman.d/mirrorlist
     echo "" >> /mnt/etc/pacman.conf;echo "[multilib]" >> /mnt/etc/pacman.conf;echo "Include = /etc/pacman.d/mirrorlist" >> /mnt/etc/pacman.conf
-    echo "" >> /mnt/etc/pacman.conf;echo "[magyarch_repo]" >> /mnt/etc/pacman.conf;echo "SigLevel = Optional TrustedOnly" >> /mnt/etc/pacman.conf;echo 'Server = https://magyarch.github.io/$repo/$arch' >> /mnt/etc/pacman.conf
+    echo "" >> /mnt/etc/pacman.conf;echo "[magyarch_repo]" >> /mnt/etc/pacman.conf;echo "SigLevel = Optional TrustedOnly" >> /mnt/etc/pacman.conf;echo 'Server = http://magyarch.github.io/magyarch_repo/x86_64/$repo/$arch' >> /mnt/etc/pacman.conf
 
     arch_chroot "pacman -Syy"
 
