@@ -2298,7 +2298,7 @@ install_run() {
 
 
     echo "# $INS000"
-    reflector --verbose -l 4 -p https --sort rate --save /etc/pacman.d/mirrorlist
+    reflector -c "Hungary" --verbose -l 4 -p https --sort rate --save /etc/pacman.d/mirrorlist
     
     echo "10"
 
