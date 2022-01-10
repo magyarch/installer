@@ -2332,9 +2332,9 @@ install_run() {
         arch_chroot "mkdir -p /mnt/mnt/etc/skel"
         if [ "$VERSION" = "Test" ]
         then
-            arch_chroot "git clone https://github.com/bazeeel/magyarch-awesome.git /mnt/mnt/etc/skel/"
+            arch_chroot "git clone https://github.com/magyarch/magyarch-awesome.git /mnt/mnt/etc/skel/"
         else
-            arch_chroot "git clone -b $VERSION https://github.com/bazeeel/magyarch-awesome.git /mnt/mnt/etc/skel/"
+            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-awesome.git /mnt/mnt/etc/skel/"
         fi
         arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
     fi
@@ -2393,9 +2393,9 @@ install_run() {
         arch_chroot "mkdir -p /mnt/mnt/etc/skel"
         if [ "$VERSION" = "Test" ]
         then
-            arch_chroot "git clone https://github.com/bazeeel/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
+            arch_chroot "git clone https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
         else
-            arch_chroot "git clone -b $VERSION https://github.com/bazeeel/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
+            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
         fi
         arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
     fi
@@ -2405,9 +2405,9 @@ install_run() {
         arch_chroot "mkdir -p /mnt/mnt/etc/skel"
         if [ "$VERSION" = "Test" ]
         then
-            arch_chroot "git clone https://github.com/bazeeel/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
+            arch_chroot "git clone https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
         else
-            arch_chroot "git clone -b $VERSION https://github.com/bazeeel/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
+            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
         fi
         arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
        
@@ -2440,9 +2440,9 @@ install_run() {
         echo "qtile"
         if [ "$VERSION" = "Test" ]
         then
-            git clone https://github.com/bazeeel/magyarch-xmonad.git 
+            git clone https://github.com/magyarch/magyarch-xmonad.git 
         else
-            git clone -b $VERSION https://github.com/bazeeel/magyarch-xmonad.git 
+            git clone -b $VERSION https://github.com/magyarch/magyarch-xmonad.git 
         fi
         cp -rfT magyarch-xmonad/ /mnt/etc/skel/
     fi
@@ -2453,9 +2453,9 @@ install_run() {
         echo "qtile"
         if [ "$VERSION" = "Test" ]
         then
-            git clone https://github.com/bazeeel/magyarch-xmonad-polybar.git 
+            git clone https://github.com/magyarch/magyarch-xmonad-polybar.git 
         else
-            git clone -b $VERSION https://github.com/bazeeel/magyarch-xmonad-polybar.git 
+            git clone -b $VERSION https://github.com/magyarch/magyarch-xmonad-polybar.git 
         fi
         cp -rfT magyarch-xmonad-polybar/ /mnt/etc/skel/
     fi
