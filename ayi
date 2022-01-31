@@ -2298,8 +2298,8 @@ install_run() {
 
 
     echo "# $INS000"
-    #reflector -c "Hungary" --verbose -l 4 -p https --sort rate --save /etc/pacman.d/mirrorlist
-    reflector --country Hungary,Germany --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+    reflector -l 20 -p http -p https --sort score --save /etc/pacman.d/mirrorlist
+    #reflector --country Hungary,Germany --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
     
     echo "10"
 
