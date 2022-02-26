@@ -2298,8 +2298,8 @@ install_run() {
 
 
     echo "# $INS000"
-    reflector -l 20 -p https --sort rate --save /etc/pacman.d/mirrorlist
-    reflector --verbose -l 10 -p https --sort score --save /etc/pacman.d/mirrorlist
+    reflector --verbose --country 'Hungary' -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+    #pacman -Syy
     
     echo "10"
 
@@ -2307,7 +2307,7 @@ install_run() {
     # echo "$miro" > miro.txt
     # cp miro.txt /etc/pacman.d/mirrorlist
 
-     pacman -Syy
+     
 
     echo "# $INS009"
     if [ "$kern" = "linux" ]
