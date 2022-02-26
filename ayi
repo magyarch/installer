@@ -2556,11 +2556,11 @@ install_run() {
 
     if [ "$kern" = "linux" -a "$grc" = "virtualbox" ]
     then
-        arch_chroot "pacman -S --noconfirm --needed virtualbox-guest-dkms virtualbox-guest-utils linux-headers "
+        arch_chroot "pacman -S --noconfirm --needed virtualbox-guest-utils linux-headers "
         echo -e "vboxguest\nvboxsf\nvboxvideo" > /mnt/etc/modules-load.d/virtualbox.conf
     elif [ "$kern" = "linux-lts" -a "$grc" = "virtualbox" ]
     then
-        arch_chroot "pacman -S --noconfirm --needed virtualbox-guest-dkms virtualbox-guest-utils linux-lts-headers"
+        arch_chroot "pacman -S --noconfirm --needed virtualbox-guest-utils linux-lts-headers"
         echo -e "vboxguest\nvboxsf\nvboxvideo" > /mnt/etc/modules-load.d/virtualbox.conf
     elif [ "$grc" = "i915" ]
     then
@@ -2678,7 +2678,7 @@ install_run() {
     then
         
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty arandr atool awesome bc firefox calcurse discord dmenu2 docx2txt dosfstools dunst \
+            alacritty arandr awesome bc firefox calcurse discord dmenu2 docx2txt dosfstools dunst \
             ed exfat-utils expac feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify \
             lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g \
             odt2txt pavucontrol pcmanfm picom polkit-gnome rofi rxvt-unicode rxvt-unicode scrot socat \
