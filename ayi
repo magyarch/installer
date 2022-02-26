@@ -2527,8 +2527,8 @@ install_run() {
 
     echo "# $INS005"
     arch_chroot "pacman -S --noconfirm --needed \
-        acpi alsa-utils apg b43-fwcutter conky-lua-archers cowsay ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
-        networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pulseaudio pulseaudio-alsa \
+        acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
+        networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pipewire pipewire-alsa pipewire-pulse pipewire-media-session pipewire-jack \
         python-ueberzug python-psutil python-requests xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
 
@@ -2681,11 +2681,10 @@ install_run() {
             alacritty arandr atool awesome bc firefox calcurse discord dmenu2 docx2txt dosfstools dunst \
             ed exfat-utils expac feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify \
             lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g \
-            odt2txt pavucontrol pcmanfm picom polkit-gnome polybar pulseaudio pulseaudio-alsa \
-            pulseaudio-equalizer-ladspa pulsemixer rofi rxvt-unicode rxvt-unicode scrot socat \
+            odt2txt pavucontrol pcmanfm picom polkit-gnome rofi rxvt-unicode rxvt-unicode scrot socat \
             sublime-text-4 sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
-            urlscan urxvt-perls vicious vifm w3m wmctrl xcape xclip xdo xdo xdotool xorg-server \
+            urlscan urxvt-perls vicious w3m wmctrl xcape xclip xdo xdo xdotool xorg-server \
             xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git \
             xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
@@ -2723,11 +2722,10 @@ install_run() {
             alacritty arandr atool bc firefox bspwm calcurse discord dmenu2 docx2txt dosfstools dunst ed \
             exfat-utils expac feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify \
             lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat \
-            ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome polybar pulseaudio pulseaudio-alsa \
-            pulseaudio-equalizer-ladspa pulsemixer rofi rxvt-unicode rxvt-unicode scrot socat \
+            ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome polybar rofi rxvt-unicode rxvt-unicode scrot socat \
             sublime-text-4 sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
-            urlscan urxvt-perls vifm w3m wmctrl xcape xclip xdo xdo xdotool xorg-server xorg-xbacklight \
+            urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool xorg-server xorg-xbacklight \
             xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git xwallpaper youtube-dl \
             zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
@@ -2741,10 +2739,10 @@ install_run() {
             alacritty arandr atool bc firefox calcurse discord dmenu2 docx2txt dosfstools dunst ed exfat-utils expac \
             feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
             mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome \
-            pulseaudio pulseaudio-alsa pulseaudio-equalizer-ladspa pulsemixer rofi rofi-greenclip rxvt-unicode rxvt-unicode scrot \
+            rofi rofi-greenclip rxvt-unicode rxvt-unicode scrot \
             socat sublime-text-4 surfraw sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan \
-            urxvt-perls vifm w3m wmctrl xcape xclip xdo xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
+            urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
             xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git xwallpaper youtube-dl zathura zathura-djvu \
             zathura-pdf-poppler zathura-ps"
         
@@ -2786,10 +2784,10 @@ install_run() {
             alacritty firefox calcurse discord dmenu dosfstools dunst ed exfat-utils expac feh \
             ffmpeg fzf gnome-keyring highlight htop i3blocks i3-gaps imagemagick jq libnotify lxappearance \
             maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager ntfs-3g pavucontrol \
-            pcmanfm picom polkit-gnome poppler pulseaudio pulseaudio-alsa pulseaudio-equalizer-ladspa \
-            pulsemixer python-i3ipc rofi rxvt-unicode scrot socat sublime-text-4 sxhkd sxiv tree ttf-bitstream-vera \
+            pcmanfm picom polkit-gnome poppler \
+            python-i3ipc rofi rxvt-unicode scrot socat sublime-text-4 sxhkd sxiv tree ttf-bitstream-vera \
             ttf-dejavu  ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter \
-            unrar unzip urlscan urxvt-perls vifm w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
+            unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
             xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-pdf-mupdf"
 
         arch_chroot "rm -rf /mnt/mnt"
@@ -2803,10 +2801,10 @@ install_run() {
             alacritty firefox calcurse discord dmenu dosfstools dunst ed exfat-utils expac feh \
             ffmpeg fzf gnome-keyring highlight htop i3blocks i3-gaps imagemagick jq libnotify lxappearance \
             maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager ntfs-3g pavucontrol \
-            pcmanfm picom polkit-gnome poppler polybar pulseaudio pulseaudio-alsa pulseaudio-equalizer-ladspa \
-            pulsemixer python-i3ipc rofi rxvt-unicode scrot socat sublime-text-4 sxhkd sxiv tree ttf-bitstream-vera \
+            pcmanfm picom polkit-gnome poppler polybar \
+            python-i3ipc rofi rxvt-unicode scrot socat sublime-text-4 sxhkd sxiv tree ttf-bitstream-vera \
             ttf-dejavu  ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter \
-            unrar unzip urlscan urxvt-perls vifm w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
+            unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
             xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-pdf-mupdf"
 
         arch_chroot "rm -rf /mnt/mnt"
@@ -2824,10 +2822,10 @@ install_run() {
             alacritty atool firefox calcurse cava discord dmenu docx2txt dosfstools dunst exfat-utils expac feh \
             ffmpeg fzf gnome-keyring gtop highlight htop imagemagick libnotify lxappearance maim maim mediainfo mpc \
             mpd mpv ncmpcpp neofetch neovim neovim networkmanager network-manager-applet newsboat odt2txt pavucontrol \
-            pcmanfm picom-tryone-git polkit-gnome pulseaudio pulseaudio-alsa pulsemixer python-mpd2 python-psutil python-requests \
+            pcmanfm picom-tryone-git polkit-gnome python-mpd2 python-psutil python-requests \
             python-setuptools python-xlib qtile rofi rxvt-unicode rxvt-unicode scrot sublime-text-4 sxiv tree ttf-bitstream-vera \
             ttf-dejavu ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unrar unzip urxvt-perls \
-            vifm vifm w3m wmctrl xcape xcb-util-cursor xclip xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop \
+            w3m wmctrl xcape xcb-util-cursor xclip xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop \
             xorg-xsetroot xorg-xwininfo zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
         arch_chroot "rm -rf /mnt/mnt"
@@ -2855,10 +2853,10 @@ install_run() {
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty arandr firefox calcurse discord dmenu2 docx2txt dosfstools dunst ed exfat-utils expac feh \
             ffmpeg firefox fzf gnome-keyring highlight htop imagemagick jgmenu libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
-            ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome pulseaudio \
-            pulseaudio-alsa pulseaudio-equalizer-ladspa pulsemixer rofi rxvt-unicode rxvt-unicode scrot socat stalonetray sublime-text-4 \
+            ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome \
+            rofi rxvt-unicode rxvt-unicode scrot socat stalonetray sublime-text-4 \
             sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
-            ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls vifm w3m wmctrl xcape xclip xdo xdo xdotool \
+            ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
             xmobar xmonad xmonad-contrib xmonad-utils xmonad-log xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
             xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
@@ -2872,10 +2870,10 @@ install_run() {
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty arandr firefox calcurse discord dmenu2 docx2txt dosfstools dunst ed exfat-utils expac feh \
             ffmpeg firefox fzf gnome-keyring haskell-dbus highlight htop imagemagick libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
-            ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome polybar pulseaudio \
-            pulseaudio-alsa pulseaudio-equalizer-ladspa pulsemixer rofi rxvt-unicode rxvt-unicode scrot socat sublime-text-4 \
+            ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome polybar \
+            rofi rxvt-unicode rxvt-unicode scrot socat sublime-text-4 \
             sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
-            ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls vifm w3m wmctrl xcape xclip xdo xdo xdotool \
+            ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
             xmonad xmonad-contrib xmonad-log xmonad-utils xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
             xtitle-git xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
