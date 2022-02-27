@@ -2891,10 +2891,10 @@ install_run() {
     #         arch_chroot "pacman -S deepin --needed --noconfirm"
     #     fi
 
-    # else
-    #     arch_chroot "pacman -S --noconfirm --needed $de_set "
+     else
+         arch_chroot "pacman -S --noconfirm --needed $de_set "
 
-    # fi
+     fi
     
 
     if [ "$shel_l" = "zsh" ]
