@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),dwm (MagyArch),i3 (MagyArch),spectrwm (MagyArch)"
+        "bspwm (MagyArch),dwm (MagyArch),i3 (MagyArch),spectrwm (MagyArch)")"
 
 
     unset MAIN_LIST
