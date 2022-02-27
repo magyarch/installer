@@ -689,8 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "awesome (MagyArch),bspwm (MagyArch),dwm (MagyArch),herbstluftwm (MagyArch),i3 (MagyArch),i3+polybar (MagyArch),qtile (MagyArch),spectrwm (MagyArch),xfce4 (MagyArch),xmonad (MagyArch),\
-xmonad+polybar (MagyArch),awesome,bspwm,budgie-desktop,cinnamon,deepin,dwm,gnome,herbstluftwm,i3,jwm,lxde,lxqt,mate,openbox,plasma,qtile,spectrwm,xfce4,xmonad")"
+        "bspwm (MagyArch),dwm (MagyArch),i3 (MagyArch),spectrwm (MagyArch)"
 
 
     unset MAIN_LIST
@@ -2327,17 +2326,17 @@ install_run() {
 
     arch_chroot "pacman -Syy"
 
-    if [ "$de_set" = "awesome (MagyArch)" ]
-    then
-        arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-        if [ "$VERSION" = "Test" ]
-        then
-            arch_chroot "git clone https://github.com/magyarch/magyarch-awesome.git /mnt/mnt/etc/skel/"
-        else
-            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-awesome.git /mnt/mnt/etc/skel/"
-        fi
-        arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
-    fi
+    # if [ "$de_set" = "awesome (MagyArch)" ]
+    # then
+    #     arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+    #     if [ "$VERSION" = "Test" ]
+    #     then
+    #         arch_chroot "git clone https://github.com/magyarch/magyarch-awesome.git /mnt/mnt/etc/skel/"
+    #     else
+    #         arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-awesome.git /mnt/mnt/etc/skel/"
+    #     fi
+    #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
+    # fi
 
     if [ "$de_set" = "bspwm (MagyArch)" ]
     then
@@ -2364,17 +2363,17 @@ install_run() {
 
     fi
 
-    if [ "$de_set" = "herbstluftwm (MagyArch)" ]
-    then
-        arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-        if [ "$VERSION" = "Test" ]
-        then
-            arch_chroot "git clone https://github.com/magyarch/magyarch-hlwm.git /mnt/mnt/etc/skel/"
-        else
-            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-hlwm.git /mnt/mnt/etc/skel/"
-        fi
-        arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
-    fi
+    # if [ "$de_set" = "herbstluftwm (MagyArch)" ]
+    # then
+    #     arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+    #     if [ "$VERSION" = "Test" ]
+    #     then
+    #         arch_chroot "git clone https://github.com/magyarch/magyarch-hlwm.git /mnt/mnt/etc/skel/"
+    #     else
+    #         arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-hlwm.git /mnt/mnt/etc/skel/"
+    #     fi
+    #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
+    # fi
 
     if [ "$de_set" = "i3 (MagyArch)" ]
     then
@@ -2388,17 +2387,17 @@ install_run() {
         arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
     fi
 
-    if [ "$de_set" = "i3+polybar (MagyArch)" ]
-    then
-        arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-        if [ "$VERSION" = "Test" ]
-        then
-            arch_chroot "git clone https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
-        else
-            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
-        fi
-        arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
-    fi
+    # if [ "$de_set" = "i3+polybar (MagyArch)" ]
+    # then
+    #     arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+    #     if [ "$VERSION" = "Test" ]
+    #     then
+    #         arch_chroot "git clone https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
+    #     else
+    #         arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
+    #     fi
+    #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
+    # fi
 
     if [ "$de_set" = "spectrwm (MagyArch)" ]
     then
@@ -2413,52 +2412,52 @@ install_run() {
        
     fi
 
-    if [ "$de_set" = "xfce4 (MagyArch)" ]
-    then
-        # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-        # git clone https://github.com/magyarchlinux/magyarch_xfce4.git 
-        # cp -rf magyarch_xfce4/.config/ /mnt/etc/skel/
-        arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord sublime-text-4"
-    fi
+    # if [ "$de_set" = "xfce4 (MagyArch)" ]
+    # then
+    #     # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+    #     # git clone https://github.com/magyarchlinux/magyarch_xfce4.git 
+    #     # cp -rf magyarch_xfce4/.config/ /mnt/etc/skel/
+    #     arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord sublime-text-4"
+    # fi
 
-    if [ "$de_set" = "qtile (MagyArch)" ]
-    then
-        # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-        echo "qtile"
-        if [ "$VERSION" = "Test" ]
-        then
-            git clone https://github.com/magyarchlinux/magyarch-qtile.git 
-        else
-            git clone -b $VERSION https://github.com/magyarchlinux/magyarch-qtile.git 
-        fi
-        cp -rfT magyarch-qtile/ /mnt/etc/skel/
-    fi
+    # if [ "$de_set" = "qtile (MagyArch)" ]
+    # then
+    #     # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+    #     echo "qtile"
+    #     if [ "$VERSION" = "Test" ]
+    #     then
+    #         git clone https://github.com/magyarchlinux/magyarch-qtile.git 
+    #     else
+    #         git clone -b $VERSION https://github.com/magyarchlinux/magyarch-qtile.git 
+    #     fi
+    #     cp -rfT magyarch-qtile/ /mnt/etc/skel/
+    # fi
 
-    if [ "$de_set" = "xmonad (MagyArch)" ]
-    then
-        # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-        echo "qtile"
-        if [ "$VERSION" = "Test" ]
-        then
-            git clone https://github.com/magyarch/magyarch-xmonad.git 
-        else
-            git clone -b $VERSION https://github.com/magyarch/magyarch-xmonad.git 
-        fi
-        cp -rfT magyarch-xmonad/ /mnt/etc/skel/
-    fi
+    # if [ "$de_set" = "xmonad (MagyArch)" ]
+    # then
+    #     # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+    #     echo "qtile"
+    #     if [ "$VERSION" = "Test" ]
+    #     then
+    #         git clone https://github.com/magyarch/magyarch-xmonad.git 
+    #     else
+    #         git clone -b $VERSION https://github.com/magyarch/magyarch-xmonad.git 
+    #     fi
+    #     cp -rfT magyarch-xmonad/ /mnt/etc/skel/
+    # fi
 
-    if [ "$de_set" = "xmonad+polybar (MagyArch)" ]
-    then
-        # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-        echo "qtile"
-        if [ "$VERSION" = "Test" ]
-        then
-            git clone https://github.com/magyarch/magyarch-xmonad-polybar.git 
-        else
-            git clone -b $VERSION https://github.com/magyarch/magyarch-xmonad-polybar.git 
-        fi
-        cp -rfT magyarch-xmonad-polybar/ /mnt/etc/skel/
-    fi
+    # if [ "$de_set" = "xmonad+polybar (MagyArch)" ]
+    # then
+    #     # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+    #     echo "qtile"
+    #     if [ "$VERSION" = "Test" ]
+    #     then
+    #         git clone https://github.com/magyarch/magyarch-xmonad-polybar.git 
+    #     else
+    #         git clone -b $VERSION https://github.com/magyarch/magyarch-xmonad-polybar.git 
+    #     fi
+    #     cp -rfT magyarch-xmonad-polybar/ /mnt/etc/skel/
+    # fi
 
     echo "30"
 
@@ -2658,54 +2657,54 @@ install_run() {
 
 
     
-    if [ "$de_set" = "gnome" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed gnome gnome-extra "
-    elif [ "$de_set" = "plasma" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed plasma kde-applications "
+    # if [ "$de_set" = "gnome" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed gnome gnome-extra "
+    # elif [ "$de_set" = "plasma" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed plasma kde-applications "
     
-    elif [ "$de_set" = "xfce4" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed xfce4 xfce4-goodies "
+    # elif [ "$de_set" = "xfce4" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed xfce4 xfce4-goodies "
 
 
-    elif [ "$de_set" = "awesome" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed awesome"
+    # elif [ "$de_set" = "awesome" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed awesome"
 
-    elif [ "$de_set" = "awesome (MagyArch)" ]
-    then
+    # elif [ "$de_set" = "awesome (MagyArch)" ]
+    # then
         
-        arch_chroot "pacman -S --noconfirm --needed \
-            alacritty arandr awesome bc firefox calcurse discord dmenu2 docx2txt dosfstools dunst \
-            ed exfat-utils expac feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify \
-            lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g \
-            odt2txt pavucontrol pcmanfm picom polkit-gnome rofi rxvt-unicode rxvt-unicode scrot socat \
-            sublime-text-4 sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
-            ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
-            urlscan urxvt-perls vicious w3m wmctrl xcape xclip xdo xdo xdotool xorg-server \
-            xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git \
-            xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
+    #     arch_chroot "pacman -S --noconfirm --needed \
+    #         alacritty arandr awesome bc firefox calcurse discord dmenu2 docx2txt dosfstools dunst \
+    #         ed exfat-utils expac feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify \
+    #         lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g \
+    #         odt2txt pavucontrol pcmanfm picom polkit-gnome rofi rxvt-unicode rxvt-unicode scrot socat \
+    #         sublime-text-4 sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
+    #         ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
+    #         urlscan urxvt-perls vicious w3m wmctrl xcape xclip xdo xdo xdotool xorg-server \
+    #         xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git \
+    #         xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
-        arch_chroot "rm -rf /mnt/mnt"
-        arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+    #     arch_chroot "rm -rf /mnt/mnt"
+    #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
-    elif [ "$de_set" = "xfce4 (MagyArch)" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed magyarch-xfce4"
-        # cp -rf magyarch_xfce4/usr/share/backgrounds/magyarch/ /mnt/usr/share/backgrounds/
-        # cp -rf magyarch_xfce4/usr/share/icons/braincolor-green /mnt/usr/share/icons/
-        # cp -rf magyarch_xfce4/usr/share/icons/magyarchfinal_32_pix.png /mnt/usr/share/icons/
-        # cp -rf magyarch_xfce4/usr/share/themes/MagyArch-dark /mnt/usr/share/themes/
-        # cp -rf magyarch_xfce4/etc/lightdm/lightdm-gtk-greeter.conf /mnt/etc/lightdm/
-        # cp -rf magyarch_xfce4/usr/share/themes/MagyArch-braincolor /mnt/usr/share/themes/""
+    # elif [ "$de_set" = "xfce4 (MagyArch)" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed magyarch-xfce4"
+    #     # cp -rf magyarch_xfce4/usr/share/backgrounds/magyarch/ /mnt/usr/share/backgrounds/
+    #     # cp -rf magyarch_xfce4/usr/share/icons/braincolor-green /mnt/usr/share/icons/
+    #     # cp -rf magyarch_xfce4/usr/share/icons/magyarchfinal_32_pix.png /mnt/usr/share/icons/
+    #     # cp -rf magyarch_xfce4/usr/share/themes/MagyArch-dark /mnt/usr/share/themes/
+    #     # cp -rf magyarch_xfce4/etc/lightdm/lightdm-gtk-greeter.conf /mnt/etc/lightdm/
+    #     # cp -rf magyarch_xfce4/usr/share/themes/MagyArch-braincolor /mnt/usr/share/themes/""
 
-        # arch_chroot "rm -rf /mnt/mnt"
+    #     # arch_chroot "rm -rf /mnt/mnt"
 
-    elif [ "$de_set" = "mate" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed mate mate-extra "
+    # elif [ "$de_set" = "mate" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed mate mate-extra "
 
     elif [ "$de_set" = "bspwm" ]
     then
@@ -2815,87 +2814,87 @@ install_run() {
         arch_chroot "pacman -S --noconfirm --needed spectrwm scrot xlockmore terminus-font"
         echo "bar_font = Terminus:pixelsize=14:antialias=true" >> /mnt/etc/spectrwm.conf
 
-    elif [ "$de_set" = "qtile (MagyArch)" ]
-    then
-        #ch_chroot "pacman -S --noconfirm --needed  "
-        arch_chroot "pacman -S --noconfirm --needed \
-            alacritty atool firefox calcurse cava discord dmenu docx2txt dosfstools dunst exfat-utils expac feh \
-            ffmpeg fzf gnome-keyring gtop highlight htop imagemagick libnotify lxappearance maim maim mediainfo mpc \
-            mpd mpv ncmpcpp neofetch neovim neovim networkmanager network-manager-applet newsboat odt2txt pavucontrol \
-            pcmanfm picom-tryone-git polkit-gnome python-mpd2 python-psutil python-requests \
-            python-setuptools python-xlib qtile rofi rxvt-unicode rxvt-unicode scrot sublime-text-4 sxiv tree ttf-bitstream-vera \
-            ttf-dejavu ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unrar unzip urxvt-perls \
-            w3m wmctrl xcape xcb-util-cursor xclip xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop \
-            xorg-xsetroot xorg-xwininfo zathura zathura-djvu zathura-pdf-poppler zathura-ps"
+    # elif [ "$de_set" = "qtile (MagyArch)" ]
+    # then
+    #     #ch_chroot "pacman -S --noconfirm --needed  "
+    #     arch_chroot "pacman -S --noconfirm --needed \
+    #         alacritty atool firefox calcurse cava discord dmenu docx2txt dosfstools dunst exfat-utils expac feh \
+    #         ffmpeg fzf gnome-keyring gtop highlight htop imagemagick libnotify lxappearance maim maim mediainfo mpc \
+    #         mpd mpv ncmpcpp neofetch neovim neovim networkmanager network-manager-applet newsboat odt2txt pavucontrol \
+    #         pcmanfm picom-tryone-git polkit-gnome python-mpd2 python-psutil python-requests \
+    #         python-setuptools python-xlib qtile rofi rxvt-unicode rxvt-unicode scrot sublime-text-4 sxiv tree ttf-bitstream-vera \
+    #         ttf-dejavu ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unrar unzip urxvt-perls \
+    #         w3m wmctrl xcape xcb-util-cursor xclip xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop \
+    #         xorg-xsetroot xorg-xwininfo zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
-        arch_chroot "rm -rf /mnt/mnt"
-        arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+    #     arch_chroot "rm -rf /mnt/mnt"
+    #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
-    elif [ "$de_set" = "herbstluftwm" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed herbstluftwm xorg-xsetroot dzen2 dmenu"
+    # elif [ "$de_set" = "herbstluftwm" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed herbstluftwm xorg-xsetroot dzen2 dmenu"
 
-    elif [ "$de_set" = "herbstluftwm (MagyArch)" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed \
-            alacritty atool firefox calcurse discord dmenu2 dzen2 expac herbstluftwm lf-bin maim mpc mpd mpv ncmpcpp \
-            neofetch neovim newsboat pavucontrol pcmanfm picom polkit-gnome polybar rofi rxvt-unicode sublime-text-4 sxhkd \
-            sxiv ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip urxvt-perls vifm vim wmctrl wmctrl xcape \
-            xclip xdo xorg-xsetroot xwallpaper zathura zathura-pdf-poppler"
+    # elif [ "$de_set" = "herbstluftwm (MagyArch)" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed \
+    #         alacritty atool firefox calcurse discord dmenu2 dzen2 expac herbstluftwm lf-bin maim mpc mpd mpv ncmpcpp \
+    #         neofetch neovim newsboat pavucontrol pcmanfm picom polkit-gnome polybar rofi rxvt-unicode sublime-text-4 sxhkd \
+    #         sxiv ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip urxvt-perls vifm vim wmctrl wmctrl xcape \
+    #         xclip xdo xorg-xsetroot xwallpaper zathura zathura-pdf-poppler"
 
-        arch_chroot "rm -rf /mnt/mnt"
-        arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
-        arch_chroot "sed -i 's/Exec=herbstluftwm/Exec=herbstluftwm --locked/' /usr/share/xsessions/herbstluftwm.desktop"
+    #     arch_chroot "rm -rf /mnt/mnt"
+    #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+    #     arch_chroot "sed -i 's/Exec=herbstluftwm/Exec=herbstluftwm --locked/' /usr/share/xsessions/herbstluftwm.desktop"
 
-    elif [ "$de_set" = "xmonad (MagyArch)" ]
-    then
-        #ch_chroot "pacman -S --noconfirm --needed  "
-        arch_chroot "pacman -S --noconfirm --needed \
-            alacritty arandr firefox calcurse discord dmenu2 docx2txt dosfstools dunst ed exfat-utils expac feh \
-            ffmpeg firefox fzf gnome-keyring highlight htop imagemagick jgmenu libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
-            ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome \
-            rofi rxvt-unicode rxvt-unicode scrot socat stalonetray sublime-text-4 \
-            sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
-            ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
-            xmobar xmonad xmonad-contrib xmonad-utils xmonad-log xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
-            xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
+    # elif [ "$de_set" = "xmonad (MagyArch)" ]
+    # then
+    #     #ch_chroot "pacman -S --noconfirm --needed  "
+    #     arch_chroot "pacman -S --noconfirm --needed \
+    #         alacritty arandr firefox calcurse discord dmenu2 docx2txt dosfstools dunst ed exfat-utils expac feh \
+    #         ffmpeg firefox fzf gnome-keyring highlight htop imagemagick jgmenu libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
+    #         ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome \
+    #         rofi rxvt-unicode rxvt-unicode scrot socat stalonetray sublime-text-4 \
+    #         sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
+    #         ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
+    #         xmobar xmonad xmonad-contrib xmonad-utils xmonad-log xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
+    #         xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
-        arch_chroot "rm -rf /mnt/mnt"
-        arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
-        arch_chroot "runuser -l ${user_name} -c 'ghc -dynamic /home/$user_name/.xmonad/xmonadctl.hs' "
+    #     arch_chroot "rm -rf /mnt/mnt"
+    #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+    #     arch_chroot "runuser -l ${user_name} -c 'ghc -dynamic /home/$user_name/.xmonad/xmonadctl.hs' "
 
-    elif [ "$de_set" = "xmonad+polybar (MagyArch)" ]
-    then
-        #ch_chroot "pacman -S --noconfirm --needed  "
-        arch_chroot "pacman -S --noconfirm --needed \
-            alacritty arandr firefox calcurse discord dmenu2 docx2txt dosfstools dunst ed exfat-utils expac feh \
-            ffmpeg firefox fzf gnome-keyring haskell-dbus highlight htop imagemagick libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
-            ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome polybar \
-            rofi rxvt-unicode rxvt-unicode scrot socat sublime-text-4 \
-            sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
-            ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
-            xmonad xmonad-contrib xmonad-log xmonad-utils xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
-            xtitle-git xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
+    # elif [ "$de_set" = "xmonad+polybar (MagyArch)" ]
+    # then
+    #     #ch_chroot "pacman -S --noconfirm --needed  "
+    #     arch_chroot "pacman -S --noconfirm --needed \
+    #         alacritty arandr firefox calcurse discord dmenu2 docx2txt dosfstools dunst ed exfat-utils expac feh \
+    #         ffmpeg firefox fzf gnome-keyring haskell-dbus highlight htop imagemagick libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
+    #         ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm picom polkit-gnome polybar \
+    #         rofi rxvt-unicode rxvt-unicode scrot socat sublime-text-4 \
+    #         sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
+    #         ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
+    #         xmonad xmonad-contrib xmonad-log xmonad-utils xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
+    #         xtitle-git xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
-        arch_chroot "rm -rf /mnt/mnt"
-        arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
-        arch_chroot "runuser -l ${user_name} -c 'ghc -dynamic /home/$user_name/.xmonad/xmonadctl.hs' "
+    #     arch_chroot "rm -rf /mnt/mnt"
+    #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+    #     arch_chroot "runuser -l ${user_name} -c 'ghc -dynamic /home/$user_name/.xmonad/xmonadctl.hs' "
 
 
-    elif [ "$de_set" = "deepin" ]
-    then
-        if [ "$dm_set"  = "lightdm" ]
-        then
-            arch_chroot "pacman -S deepin --needed --noconfirm"
-            arch_chroot "sed -i  's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-gtk-greeter/' /etc/lightdm/lightdm.conf"
-        else
-            arch_chroot "pacman -S deepin --needed --noconfirm"
-        fi
+    # elif [ "$de_set" = "deepin" ]
+    # then
+    #     if [ "$dm_set"  = "lightdm" ]
+    #     then
+    #         arch_chroot "pacman -S deepin --needed --noconfirm"
+    #         arch_chroot "sed -i  's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-gtk-greeter/' /etc/lightdm/lightdm.conf"
+    #     else
+    #         arch_chroot "pacman -S deepin --needed --noconfirm"
+    #     fi
 
-    else
-        arch_chroot "pacman -S --noconfirm --needed $de_set "
+    # else
+    #     arch_chroot "pacman -S --noconfirm --needed $de_set "
 
-    fi
+    # fi
     
 
     if [ "$shel_l" = "zsh" ]
