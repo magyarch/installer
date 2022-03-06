@@ -2527,7 +2527,7 @@ install_run() {
     echo "# $INS005"
     arch_chroot "pacman -S --noconfirm --needed \
         acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
-        networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pipewire pipewire-alsa pipewire-pulse pipewire-media-session pipewire-jack \
+        networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pamixer pipewire pipewire-alsa pipewire-pulse pipewire-media-session pipewire-jack \
         python-ueberzug python-psutil python-requests xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
 
