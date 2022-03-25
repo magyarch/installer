@@ -2526,7 +2526,7 @@ install_run() {
 
     echo "# $INS005"
     arch_chroot "pacman -S --noconfirm --needed \
-        acpi autotiling apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
+        acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
         networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pamixer pipewire pipewire-alsa pipewire-pulse pipewire-media-session pipewire-jack \
         python-ueberzug python-psutil python-requests python-wheel xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
@@ -2780,10 +2780,10 @@ install_run() {
         #ch_chroot "pacman -S --noconfirm --needed  "
 
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty firefox calcurse discord dmenu dosfstools dunst ed exfat-utils expac feh \
-            ffmpeg fzf gnome-keyring highlight htop i3blocks i3-gaps imagemagick jq libnotify lxappearance \
+            alacritty autotiling firefox calcurse discord dmenu dosfstools dunst ed exfat-utils expac feh \
+            ffmpeg fzf gnome-keyring geany highlight htop i3blocks i3-gaps imagemagick jq libnotify lxappearance \
             maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager ntfs-3g pavucontrol \
-            pcmanfm picom polkit-gnome poppler \
+            pcmanfm picom-ibhagwan-git polkit-gnome poppler \
             python-i3ipc rofi rxvt-unicode scrot socat sublime-text-4 sxhkd sxiv tree ttf-bitstream-vera \
             ttf-dejavu  ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter \
             unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
