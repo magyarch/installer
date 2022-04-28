@@ -2735,7 +2735,7 @@ install_run() {
     then
         #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty atool bc calcurse discord dmenu docx2txt dosfstools dunst ed exfat-utils expac \
+            alacritty atool bc calcurse discord dmenu dzen2 polybar docx2txt dosfstools dunst ed exfat-utils expac \
             feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
             mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-ibhagwan-git polkit-gnome \
             ratpoison rofi rofi-greenclip scrot \
