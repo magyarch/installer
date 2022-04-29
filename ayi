@@ -2297,7 +2297,7 @@ install_run() {
 
 
     echo "# $INS000"
-    reflector --verbose --country 'Hungary' -l 5 --sort rate --save /etc/pacman.d/mirrorlist
+    reflector --verbose --country 'Hungary' -l 6 --sort rate --save /etc/pacman.d/mirrorlist
     #pacman -Syy
 
     echo "10"
@@ -2526,7 +2526,7 @@ install_run() {
 
     echo "# $INS005"
     arch_chroot "pacman -S --noconfirm --needed \
-        acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
+        acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq libinih lsb-release man-db mc neofetch \
         networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pamixer pipewire pipewire-alsa pipewire-pulse pipewire-media-session pipewire-jack \
         python-ueberzug python-psutil python-requests python-wheel udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
@@ -2738,8 +2738,8 @@ install_run() {
             alacritty atool bc calcurse discord dmenu dzen2 polybar docx2txt dosfstools dunst ed exfat-utils expac \
             feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
             mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-ibhagwan-git polkit-gnome \
-            ratpoison rofi rofi-greenclip scrot \
-            socat sublime-text-4 surfraw sxiv task-spooler tree \
+            ratpoison rofi \
+            socat sublime-text-4 sxiv task-spooler tree \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan \
             w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
             xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
@@ -2749,8 +2749,8 @@ install_run() {
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/slstatus && make && make clean install"
         # arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/st && make && make clean install"
         mkdir -p /mnt/usr/share/xsessions
-        echo -e "[Desktop Entry]\nName=ratpoison (MagyArch)\nComment=ratpoison Session\nExec=/usr/local/bin/ratpoison\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/mal_ratpoison.desktop
-        arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
+        echo -e "[Desktop Entry]\nName=ratpoison (MagyArch)\nComment=ratpoison Session\nExec=/usr/bin/ratpoison\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/mal_ratpoison.desktop
+        #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
         #arch_chroot "pacman -S --noconfirm --needed mst"
 
         arch_chroot "rm -rf /mnt/mnt"
@@ -2764,14 +2764,14 @@ install_run() {
     then
         #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty firefox discord dmenu2 dunst exfat-utils expac feh figlet firefox htop lolcat \
-            lxappearance maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom-ibhagwan-git polkit-gnome polybar\
+            alacritty firefox discord dmenu2 dunst exfat-utils expac feh firefox htop \
+            lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom-ibhagwan-git polkit-gnome polybar\
             rofi rxvt-unicode scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip urxvt-perls vifm \
             wmctrl xwallpaper xorg-xprop xorg-xsetroot xorg-xwininfo xdo xdotool zathura zathura-djvu zathura-pdf-poppler"
 
-        arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
-        arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
+        #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
+        #arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
         arch_chroot "rm -rf /mnt/mnt"
         arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
@@ -2809,10 +2809,10 @@ install_run() {
     #     arch_chroot "rm -rf /mnt/mnt"
     #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
-    elif [ "$de_set" = "spectrwm" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed spectrwm scrot xlockmore terminus-font"
-        echo "bar_font = Terminus:pixelsize=14:antialias=true" >> /mnt/etc/spectrwm.conf
+    #elif [ "$de_set" = "spectrwm" ]
+    #then
+     #   arch_chroot "pacman -S --noconfirm --needed spectrwm scrot xlockmore terminus-font"
+      #  echo "bar_font = Terminus:pixelsize=14:antialias=true" >> /mnt/etc/spectrwm.conf
 
     # elif [ "$de_set" = "qtile (MagyArch)" ]
     # then
