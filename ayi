@@ -2526,7 +2526,7 @@ install_run() {
 
     echo "# $INS005"
     arch_chroot "pacman -S --noconfirm --needed \
-        acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq libinih lsb-release man-db mc neofetch \
+        acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
         networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pamixer pipewire pipewire-alsa pipewire-pulse pipewire-media-session pipewire-jack \
         python-ueberzug python-psutil python-requests python-wheel udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
@@ -2749,7 +2749,7 @@ install_run() {
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/slstatus && make && make clean install"
         # arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/st && make && make clean install"
         mkdir -p /mnt/usr/share/xsessions
-        echo -e "[Desktop Entry]\nName=ratpoison (MagyArch)\nComment=ratpoison Session\nExec=/usr/bin/ratpoison\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/mal_ratpoison.desktop
+        echo -e "[Desktop Entry]\nName=ratpoison (MagyArch)\nComment=ratpoison Session\nExec=/usr/bin/ratpoison\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/ratpoison.desktop
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
         #arch_chroot "pacman -S --noconfirm --needed mst"
 
