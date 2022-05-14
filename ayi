@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),spectrwm (MagyArch),xfce4 (MagyArch)")"
+        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),spectrwm (MagyArch)")"
 
 
     unset MAIN_LIST
@@ -2996,12 +2996,12 @@ install_run() {
 
     umount -R /mnt
 
-    
+
     echo "100"
-   
-    echo "# $INS011" ) | yad --title="$TITLE" --width=400 --height=250 --progress --auto-close --enable-log --log-expanded --no-buttons  
-       
-    yad --image=info --title="$TITLE" --buttons-layout=center --text="$INS011" 
+
+    echo "# $INS011" ) | yad --title="$TITLE" --width=400 --height=250 --progress --auto-close --enable-log --log-expanded --no-buttons
+
+    yad --image=info --title="$TITLE" --buttons-layout=center --text="$INS011"
     cev="$?"
     # reboot
     if [ "$cev" == 0 ]
@@ -3010,7 +3010,7 @@ install_run() {
     else
         exit 1
     fi
-   
+
 
 
 }
