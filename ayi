@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),spectrwm (MagyArch)")"
+        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),spectrwm (MagyArch),xfce4 (MagyArch)")"
 
 
     unset MAIN_LIST
@@ -2412,13 +2412,13 @@ install_run() {
 
     fi
 
-    # if [ "$de_set" = "xfce4 (MagyArch)" ]
-    # then
-    #     # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-    #     # git clone https://github.com/magyarchlinux/magyarch_xfce4.git
-    #     # cp -rf magyarch_xfce4/.config/ /mnt/etc/skel/
-    #     arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord sublime-text-4"
-    # fi
+    if [ "$de_set" = "xfce4 (MagyArch)" ]
+    then
+        # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+        # git clone https://github.com/magyarchlinux/magyarch_xfce4.git
+        # cp -rf magyarch_xfce4/.config/ /mnt/etc/skel/
+        arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord sublime-text-4"
+    fi
 
     # if [ "$de_set" = "qtile (MagyArch)" ]
     # then
@@ -2690,17 +2690,17 @@ install_run() {
     #     arch_chroot "rm -rf /mnt/mnt"
     #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
-    # elif [ "$de_set" = "xfce4 (MagyArch)" ]
-    # then
-    #     arch_chroot "pacman -S --noconfirm --needed magyarch-xfce4"
-    #     # cp -rf magyarch_xfce4/usr/share/backgrounds/magyarch/ /mnt/usr/share/backgrounds/
-    #     # cp -rf magyarch_xfce4/usr/share/icons/braincolor-green /mnt/usr/share/icons/
-    #     # cp -rf magyarch_xfce4/usr/share/icons/magyarchfinal_32_pix.png /mnt/usr/share/icons/
-    #     # cp -rf magyarch_xfce4/usr/share/themes/MagyArch-dark /mnt/usr/share/themes/
-    #     # cp -rf magyarch_xfce4/etc/lightdm/lightdm-gtk-greeter.conf /mnt/etc/lightdm/
-    #     # cp -rf magyarch_xfce4/usr/share/themes/MagyArch-braincolor /mnt/usr/share/themes/""
+    elif [ "$de_set" = "xfce4 (MagyArch)" ]
+    then
+        arch_chroot "pacman -S --noconfirm --needed magyarch-xfce4"
+        cp -rf magyarch_xfce4/usr/share/backgrounds/magyarch/ /mnt/usr/share/backgrounds/
+        cp -rf magyarch_xfce4/usr/share/icons/braincolor-green /mnt/usr/share/icons/
+        cp -rf magyarch_xfce4/usr/share/icons/magyarchfinal_32_pix.png /mnt/usr/share/icons/
+        cp -rf magyarch_xfce4/usr/share/themes/MagyArch-dark /mnt/usr/share/themes/
+        cp -rf magyarch_xfce4/etc/lightdm/lightdm-gtk-greeter.conf /mnt/etc/lightdm/
+        cp -rf magyarch_xfce4/usr/share/themes/MagyArch-braincolor /mnt/usr/share/themes/""
 
-    #     # arch_chroot "rm -rf /mnt/mnt"
+        arch_chroot "rm -rf /mnt/mnt"
 
     # elif [ "$de_set" = "mate" ]
     # then
@@ -2747,7 +2747,7 @@ install_run() {
 
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/ratpoison && make && make clean install"
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/slstatus && make && make clean install"
-        # arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/st && make && make clean install"
+        arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
         mkdir -p /mnt/usr/share/xsessions
         echo -e "[Desktop Entry]\nName=ratpoison (MagyArch)\nComment=ratpoison Session\nExec=/usr/bin/ratpoison\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/ratpoison.desktop
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
@@ -2762,7 +2762,6 @@ install_run() {
 
     elif [ "$de_set" = "spectrwm (MagyArch)" ]
     then
-        #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty firefox discord dmenu2 dunst exfat-utils expac feh firefox htop \
             lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom-ibhagwan-git polkit-gnome polybar\
