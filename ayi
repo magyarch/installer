@@ -2412,14 +2412,14 @@ install_run() {
 
     fi
 
-    if [ "$de_set" = "xfce4 (MagyArch)" ]
-    then
-        sleep 2s
-        if [ "$VERSION" = "Test" ]
-        then
-        arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord sublime-text-4"
+    # if [ "$de_set" = "xfce4 (MagyArch)" ]
+    # then
+    #     sleep 2s
+    #     if [ "$VERSION" = "Test" ]
+    #     then
+    #     arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord sublime-text-4"
 
-    fi
+    # fi
 
     # if [ "$de_set" = "qtile (MagyArch)" ]
     # then
@@ -2684,9 +2684,9 @@ install_run() {
     #     arch_chroot "rm -rf /mnt/mnt"
     #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
-    elif [ "$de_set" = "xfce4 (MagyArch)" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed magyarch-xfce4"
+    # elif [ "$de_set" = "xfce4 (MagyArch)" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed magyarch-xfce4"
         # cp -rf magyarch_xfce4/usr/share/backgrounds/magyarch/ /mnt/usr/share/backgrounds/
         # cp -rf magyarch_xfce4/usr/share/icons/braincolor-green /mnt/usr/share/icons/
         # cp -rf magyarch_xfce4/usr/share/icons/magyarchfinal_32_pix.png /mnt/usr/share/icons/
@@ -2996,11 +2996,12 @@ install_run() {
 
     umount -R /mnt
 
+    
     echo "100"
-    echo "# $INS011"
-    ) | yad --title="$TITLE" --width=400 --height=250 --progress --auto-close --enable-log --log-expanded --no-buttons
-
-    yad --image=info --title="$TITLE" --buttons-layout=center --text="$INS011"
+   
+    echo "# $INS011" ) | yad --title="$TITLE" --width=400 --height=250 --progress --auto-close --enable-log --log-expanded --no-buttons  
+       
+    yad --image=info --title="$TITLE" --buttons-layout=center --text="$INS011" 
     cev="$?"
     # reboot
     if [ "$cev" == 0 ]
@@ -3009,8 +3010,11 @@ install_run() {
     else
         exit 1
     fi
+   
+
 
 }
+
 
 # Main
 main() {
