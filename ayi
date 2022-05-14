@@ -2414,7 +2414,7 @@ install_run() {
 
     if [ "$de_set" = "xfce4 (MagyArch)" ]
     then
-        arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord sublime-text-4"
+        sleep 2s
         if [ "$VERSION" = "Test" ]
         then
         arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord sublime-text-4"
