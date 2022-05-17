@@ -2757,8 +2757,8 @@ install_run() {
     elif [ "$de_set" = "spectrwm (MagyArch)" ]
     then
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty firefox discord dmenu2 dunst exfat-utils expac feh firefox htop \
-            lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom-ibhagwan-git polkit-gnome polybar\
+            alacritty firefox discord dmenu dunst exfat-utils expac feh firefox htop \
+            lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
             rofi rxvt-unicode scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip urxvt-perls vifm \
             wmctrl xwallpaper xorg-xprop xorg-xsetroot xorg-xwininfo xdo xdotool zathura zathura-djvu zathura-pdf-poppler"
