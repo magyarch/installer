@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),spectrwm (MagyArch)")"
+        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xfce4")"
 
 
     unset MAIN_LIST
@@ -2399,18 +2399,18 @@ install_run() {
     #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
     # fi
 
-    if [ "$de_set" = "spectrwm (MagyArch)" ]
-    then
-        arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-        if [ "$VERSION" = "Test" ]
-        then
-            arch_chroot "git clone https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
-        else
-            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
-        fi
-        arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
+    # if [ "$de_set" = "spectrwm (MagyArch)" ]
+    # then
+    #     arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+    #     if [ "$VERSION" = "Test" ]
+    #     then
+    #         arch_chroot "git clone https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
+    #     else
+    #         arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
+    #     fi
+    #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
 
-    fi
+    # fi
 
     # if [ "$de_set" = "xfce4 (MagyArch)" ]
     # then
@@ -2530,7 +2530,7 @@ install_run() {
         acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
         networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pamixer pipewire pipewire-alsa pipewire-pulse pipewire-media-session pipewire-jack \
         python-ueberzug python-psutil python-requests python-wheel udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
-        xorg-apps xorg-server xorg-twm xorg-xinit xterm xfce4 xfce4-goodies wget"
+        xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
 
     cp /installer/lsb-release /mnt/etc/
 
@@ -2754,21 +2754,21 @@ install_run() {
     #then
      #   arch_chroot "pacman -S --noconfirm --needed ratpoison st libx11 libxinerama libxft freetype2 dmenu"
 
-    elif [ "$de_set" = "spectrwm (MagyArch)" ]
-    then
-        arch_chroot "pacman -S --noconfirm --needed \
-            alacritty firefox cifs-utils discord dmenu dunst exfat-utils expac feh firefox htop \
-            lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
-            rofi rxvt-unicode scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
-            ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip urxvt-perls vifm \
-            mctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
-            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
-            zathura-pdf-poppler zathura-ps"
+    # elif [ "$de_set" = "spectrwm (MagyArch)" ]
+    # then
+    #     arch_chroot "pacman -S --noconfirm --needed \
+    #         alacritty firefox cifs-utils discord dmenu dunst exfat-utils expac feh firefox htop \
+    #         lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
+    #         rofi rxvt-unicode scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
+    #         ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip urxvt-perls vifm \
+    #         mctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
+    #         xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
+    #         zathura-pdf-poppler zathura-ps"
 
-        #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
-        #arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
-        arch_chroot "rm -rf /mnt/mnt"
-        arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+    #     #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
+    #     #arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
+    #     arch_chroot "rm -rf /mnt/mnt"
+    #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
     elif [ "$de_set" = "i3 (MagyArch)" ]
     then
@@ -2876,20 +2876,20 @@ install_run() {
     #     arch_chroot "runuser -l ${user_name} -c 'ghc -dynamic /home/$user_name/.xmonad/xmonadctl.hs' "
 
 
-    # elif [ "$de_set" = "deepin" ]
-    # then
-    #     if [ "$dm_set"  = "lightdm" ]
-    #     then
-    #         arch_chroot "pacman -S deepin --needed --noconfirm"
-    #         arch_chroot "sed -i  's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-gtk-greeter/' /etc/lightdm/lightdm.conf"
-    #     else
-    #         arch_chroot "pacman -S deepin --needed --noconfirm"
-    #     fi
+    elif [ "$de_set" = "xfce4" ]
+    then
+        if [ "$dm_set"  = "lightdm" ]
+        then
+            arch_chroot "pacman -S xfce4 xfce4-goodies --needed --noconfirm"
+            arch_chroot "sed -i  's/#greeter-session=example-gtk-gnome/greeter-session=lightdm-gtk-greeter/' /etc/lightdm/lightdm.conf"
+        else
+            arch_chroot "pacman -S xfce4 xfce4-goodies --needed --noconfirm"
+        fi
 
      else
          arch_chroot "pacman -S --noconfirm --needed $de_set "
 
-     fi
+        fi
 
 
     if [ "$shel_l" = "zsh" ]
