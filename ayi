@@ -2530,7 +2530,7 @@ install_run() {
         acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
         networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pamixer pipewire pipewire-alsa pipewire-pulse pipewire-media-session pipewire-jack \
         python-ueberzug python-psutil python-requests python-wheel udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
-        xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
+        xorg-apps xorg-server xorg-twm xorg-xinit xterm xfce4 xfce4-goodies wget"
 
     cp /installer/lsb-release /mnt/etc/
 
@@ -2757,11 +2757,13 @@ install_run() {
     elif [ "$de_set" = "spectrwm (MagyArch)" ]
     then
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty firefox discord dmenu dunst exfat-utils expac feh firefox htop \
+            alacritty firefox cifs-utils discord dmenu dunst exfat-utils expac feh firefox htop \
             lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
             rofi rxvt-unicode scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip urxvt-perls vifm \
-            wmctrl xwallpaper xorg-xprop xorg-xsetroot xorg-xwininfo xdo xdotool zathura zathura-djvu zathura-pdf-poppler"
+            mctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
+            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
+            zathura-pdf-poppler zathura-ps"
 
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
         #arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
