@@ -2729,9 +2729,9 @@ install_run() {
     then
         #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty atool bc calcurse discord dmenu dzen2 polybar docx2txt dosfstools dunst ed exfat-utils expac \
-            feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
-            mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-ibhagwan-git polkit-gnome \
+            alacritty atool bc calcurse discord dzen2 docx2txt dosfstools dunst ed exfat-utils expac \
+            feh scrot ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
+            mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom polkit-gnome \
             ratpoison rofi \
             socat sublime-text-4 sxiv task-spooler tree \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan \
@@ -2741,7 +2741,7 @@ install_run() {
 
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/ratpoison && make && make clean install"
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/slstatus && make && make clean install"
-      #  arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
+        arch_chroot "git clone https://github.com/magyarch/magyarch-dmenu.git /mnt/mnt/magyarch-dmenu; cd /mnt/mnt/magyarch-dmenu; make clean install"
         mkdir -p /mnt/usr/share/xsessions
         echo -e "[Desktop Entry]\nName=ratpoison (MagyArch)\nComment=ratpoison Session\nExec=/usr/bin/ratpoison\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/ratpoison.desktop
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
