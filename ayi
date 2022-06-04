@@ -2741,7 +2741,7 @@ install_run() {
 
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/ratpoison && make && make clean install"
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/slstatus && make && make clean install"
-        arch_chroot "git clone https://github.com/magyarch/magyarch-dmenu.git /mnt/mnt/magyarch-dmenu; cd /mnt/mnt/magyarch-dmenu; make clean install"
+        arch_chroot "git clone https://github.com/magyarch/magyarch-dmenu.git /mnt/mnt/magyarch-dmenu; cd /mnt/mnt/magyarch-dmenu/magyarch-dmenu; make clean install"
         mkdir -p /mnt/usr/share/xsessions
         echo -e "[Desktop Entry]\nName=ratpoison (MagyArch)\nComment=ratpoison Session\nExec=/usr/bin/ratpoison\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/ratpoison.desktop
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
