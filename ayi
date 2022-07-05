@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xfce4")"
+        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xmonad (MagyArch),xfce4")"
 
 
     unset MAIN_LIST
@@ -2297,7 +2297,7 @@ install_run() {
 
 
     echo "# $INS000"
-    reflector --verbose --country 'Hungary' -l 6 --sort rate --save /etc/pacman.d/mirrorlist
+    reflector --verbose --country 'Hungary' -l 10 --sort rate --save /etc/pacman.d/mirrorlist
     #pacman -Syy
 
     echo "10"
@@ -2434,18 +2434,18 @@ install_run() {
     #     cp -rfT magyarch-qtile/ /mnt/etc/skel/
     # fi
 
-    # if [ "$de_set" = "xmonad (MagyArch)" ]
-    # then
-    #     # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-    #     echo "qtile"
-    #     if [ "$VERSION" = "Test" ]
-    #     then
-    #         git clone https://github.com/magyarch/magyarch-xmonad.git
-    #     else
-    #         git clone -b $VERSION https://github.com/magyarch/magyarch-xmonad.git
-    #     fi
-    #     cp -rfT magyarch-xmonad/ /mnt/etc/skel/
-    # fi
+    if [ "$de_set" = "xmonad (MagyArch)" ]
+    then
+        # arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+        echo "qtile"
+        if [ "$VERSION" = "Test" ]
+        then
+            git clone https://github.com/magyarch/magyarch-xmonad.git
+        else
+            git clone -b $VERSION https://github.com/magyarch/magyarch-xmonad.git
+        fi
+        cp -rfT magyarch-xmonad/ /mnt/etc/skel/
+    fi
 
     # if [ "$de_set" = "xmonad+polybar (MagyArch)" ]
     # then
@@ -2528,7 +2528,7 @@ install_run() {
     echo "# $INS005"
     arch_chroot "pacman -S --noconfirm --needed \
         acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
-        networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor pamixer pipewire pipewire-alsa pipewire-pulse pipewire-media-session pipewire-jack \
+        networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor wireplumber pamixer pipewire pipewire-alsa pipewire-pulse pipewire-jack \
         python-ueberzug python-psutil python-requests python-wheel udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
 
@@ -2712,16 +2712,17 @@ install_run() {
     then
         #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty arandr atool bc firefox bspwm calcurse discord dmenu2 docx2txt dosfstools dunst ed \
-            exfat-utils expac feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify \
+            alacritty bc firefox bspwm calcurse discord docx2txt dosfstools dunst ed \
+            exfat-utils expac feh ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify \
             lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat \
-            ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-ibhagwan-git polkit-gnome polybar rofi rxvt-unicode rxvt-unicode scrot socat \
+            ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar rofi rxvt-unicode rxvt-unicode scrot socat \
             sublime-text-4 sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
             urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
             xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git xwallpaper youtube-dl \
             zathura zathura-djvu zathura-pdf-poppler zathura-ps"
-
+        
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make clean install"
         arch_chroot "rm -rf /mnt/mnt"
         arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
@@ -2841,22 +2842,23 @@ install_run() {
     #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
     #     arch_chroot "sed -i 's/Exec=herbstluftwm/Exec=herbstluftwm --locked/' /usr/share/xsessions/herbstluftwm.desktop"
 
-    # elif [ "$de_set" = "xmonad (MagyArch)" ]
-    # then
-    #     #ch_chroot "pacman -S --noconfirm --needed  "
-    #     arch_chroot "pacman -S --noconfirm --needed \
-    #         alacritty arandr firefox calcurse discord dmenu2 docx2txt dosfstools dunst ed exfat-utils expac feh \
-    #         ffmpeg firefox fzf gnome-keyring highlight htop imagemagick jgmenu libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
-    #         ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom polkit-gnome \
-    #         rofi rxvt-unicode rxvt-unicode scrot socat stalonetray sublime-text-4 \
-    #         sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
-    #         ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
-    #         xmobar xmonad xmonad-contrib xmonad-utils xmonad-log xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
-    #         xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
-
-    #     arch_chroot "rm -rf /mnt/mnt"
-    #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
-    #     arch_chroot "runuser -l ${user_name} -c 'ghc -dynamic /home/$user_name/.xmonad/xmonadctl.hs' "
+    elif [ "$de_set" = "xmonad (MagyArch)" ]
+    then
+        #ch_chroot "pacman -S --noconfirm --needed  "
+        arch_chroot "pacman -S --noconfirm --needed \
+            alacritty arandr firefox calcurse discord docx2txt dosfstools dunst ed exfat-utils expac feh \
+            ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
+            ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom polkit-gnome \
+            rofi rxvt-unicode rxvt-unicode scrot socat stalonetray sublime-text-4 \
+            sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
+            ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
+            xmobar xmonad xmonad-contrib xmonad-utils xmonad-log xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
+            xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
+        
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make clean install"
+        arch_chroot "rm -rf /mnt/mnt"
+        arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+        arch_chroot "runuser -l ${user_name} -c 'ghc -dynamic /home/$user_name/.xmonad/xmonadctl.hs' "
 
     # elif [ "$de_set" = "xmonad+polybar (MagyArch)" ]
     # then
