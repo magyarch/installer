@@ -2723,6 +2723,7 @@ install_run() {
             zathura zathura-djvu zathura-pdf-poppler zathura-ps"
         
         arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make clean install"
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make clean install"
         arch_chroot "rm -rf /mnt/mnt"
         arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
@@ -2741,6 +2742,7 @@ install_run() {
             zathura-pdf-poppler zathura-ps"
 
         arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make clean install"
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make clean install"
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/slstatus && make && make clean install"
         #arch_chroot "git clone https://github.com/magyarch/magyarch-dmenu.git /mnt/mnt/magyarch-dmenu; cd /mnt/mnt/magyarch-dmenu/magyarch-dmenu; make clean install"
         mkdir -p /mnt/usr/share/xsessions
@@ -2776,7 +2778,7 @@ install_run() {
         #ch_chroot "pacman -S --noconfirm --needed  "
 
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty autotiling firefox calcurse discord dmenu dosfstools dunst ed exfat-utils expac feh \
+            alacritty autotiling firefox calcurse discord dosfstools dunst ed exfat-utils expac feh \
             ffmpeg fzf gnome-keyring geany highlight htop i3blocks i3-gaps imagemagick jq libnotify lxappearance \
             maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager ntfs-3g pavucontrol \
             pcmanfm-gtk3 picom-ibhagwan-git polkit-gnome poppler \
@@ -2784,7 +2786,9 @@ install_run() {
             ttf-dejavu  ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter \
             unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
             xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-pdf-mupdf"
-
+        
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make clean install"
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make clean install"
         arch_chroot "rm -rf /mnt/mnt"
         arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
@@ -2856,6 +2860,7 @@ install_run() {
             xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
         
         arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make clean install"
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make clean install"
         arch_chroot "rm -rf /mnt/mnt"
         arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
         arch_chroot "runuser -l ${user_name} -c 'ghc -dynamic /home/$user_name/.xmonad/xmonadctl.hs' "
