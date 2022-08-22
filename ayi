@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xmonad (MagyArch),xfce4")"
+        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xmonad (MagyArch),xfce4,i3+polybar (MagyArch)")"
 
 
     unset MAIN_LIST
@@ -2387,17 +2387,17 @@ install_run() {
         arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
     fi
 
-    # if [ "$de_set" = "i3+polybar (MagyArch)" ]
-    # then
-    #     arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-    #     if [ "$VERSION" = "Test" ]
-    #     then
-    #         arch_chroot "git clone https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
-    #     else
-    #         arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
-    #     fi
-    #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
-    # fi
+    if [ "$de_set" = "i3+polybar (MagyArch)" ]
+    then
+        arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+        if [ "$VERSION" = "Test" ]
+        then
+            arch_chroot "git clone https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
+        else
+            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
+        fi
+        arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
+    fi
 
     # if [ "$de_set" = "spectrwm (MagyArch)" ]
     # then
