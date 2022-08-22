@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xmonad (MagyArch),xfce4,i3+polybar (MagyArch)")"
+        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xmonad (MagyArch),xfce4")"
 
 
     unset MAIN_LIST
@@ -2387,17 +2387,17 @@ install_run() {
         arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
     fi
 
-    if [ "$de_set" = "i3+polybar (MagyArch)" ]
-    then
-        arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-        if [ "$VERSION" = "Test" ]
-        then
-            arch_chroot "git clone https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
-        else
-            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
-        fi
-        arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
-    fi
+    # if [ "$de_set" = "i3+polybar (MagyArch)" ]
+    # then
+    #     arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+    #     if [ "$VERSION" = "Test" ]
+    #     then
+    #         arch_chroot "git clone https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
+    #     else
+    #         arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-i3-polybar.git /mnt/mnt/etc/skel/"
+    #     fi
+    #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
+    # fi
 
     # if [ "$de_set" = "spectrwm (MagyArch)" ]
     # then
@@ -2792,22 +2792,22 @@ install_run() {
         arch_chroot "rm -rf /mnt/mnt"
         arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
-     elif [ "$de_set" = "i3+polybar (MagyArch)" ]
-     then
-         #ach_chroot "pacman -S --noconfirm --needed  "
+     # elif [ "$de_set" = "i3+polybar (MagyArch)" ]
+     # then
+     #     #ach_chroot "pacman -S --noconfirm --needed  "
 
-         arch_chroot "pacman -S --noconfirm --needed \
-             alacritty firefox calcurse discord dmenu dosfstools dunst ed exfat-utils expac feh \
-             ffmpeg fzf gnome-keyring highlight htop i3blocks i3-gaps imagemagick jq libnotify lxappearance \
-             maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager ntfs-3g pavucontrol \
-             pcmanfm-gtk3 picom polkit-gnome poppler polybar \
-             python-i3ipc rofi rxvt-unicode scrot socat sublime-text-4 sxhkd sxiv tree ttf-bitstream-vera \
-             ttf-dejavu  ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter \
-             unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
-             xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-pdf-mupdf"
+     #     arch_chroot "pacman -S --noconfirm --needed \
+     #         alacritty firefox calcurse discord dmenu dosfstools dunst ed exfat-utils expac feh \
+     #         ffmpeg fzf gnome-keyring highlight htop i3blocks i3-gaps imagemagick jq libnotify lxappearance \
+     #         maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager ntfs-3g pavucontrol \
+     #         pcmanfm-gtk3 picom polkit-gnome poppler polybar \
+     #         python-i3ipc rofi rxvt-unicode scrot socat sublime-text-4 sxhkd sxiv tree ttf-bitstream-vera \
+     #         ttf-dejavu  ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter \
+     #         unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
+     #         xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-pdf-mupdf"
 
-         arch_chroot "rm -rf /mnt/mnt"
-         arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+     #     arch_chroot "rm -rf /mnt/mnt"
+     #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
     #elif [ "$de_set" = "spectrwm" ]
     #then
