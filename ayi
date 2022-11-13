@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xmonad (MagyArch),xfce4")"
+        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xmonad (MagyArch),gnome,plasma,mate,xfce4")"
 
 
     unset MAIN_LIST
@@ -2651,12 +2651,12 @@ install_run() {
 
 
 
-    # if [ "$de_set" = "gnome" ]
-    # then
-    #     arch_chroot "pacman -S --noconfirm --needed gnome gnome-extra "
-    # elif [ "$de_set" = "plasma" ]
-    # then
-    #     arch_chroot "pacman -S --noconfirm --needed plasma kde-applications "
+    if [ "$de_set" = "gnome" ]
+    then
+        arch_chroot "pacman -S --noconfirm --needed gnome gnome-extra "
+    elif [ "$de_set" = "plasma" ]
+    then
+        arch_chroot "pacman -S --noconfirm --needed plasma kde-applications "
 
     # elif [ "$de_set" = "xfce4" ]
     # then
@@ -2696,9 +2696,9 @@ install_run() {
 
         # arch_chroot "rm -rf /mnt/mnt"
 
-    # elif [ "$de_set" = "mate" ]
-    # then
-    #     arch_chroot "pacman -S --noconfirm --needed mate mate-extra "
+    elif [ "$de_set" = "mate" ]
+    then
+        arch_chroot "pacman -S --noconfirm --needed mate mate-extra "
 
     # elif [ "$de_set" = "bspwm" ]
     # then
