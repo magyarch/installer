@@ -2708,7 +2708,7 @@ install_run() {
     #     arch_chroot "su ${user_name} -c 'cp /usr/share/doc/bspwm/examples/bspwmrc /home/$user_name/.config/bspwm/'"
     #     arch_chroot "su ${user_name} -c 'cp /usr/share/doc/bspwm/examples/sxhkdrc /home/$user_name/.config/sxhkd/'"
 
-    if [ "$de_set" = "bspwm (MagyArch)" ]
+    elif [ "$de_set" = "bspwm (MagyArch)" ]
     then
         #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
