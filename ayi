@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 
 . gettext.sh
 
@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xmonad (MagyArch),gnome,plasma,mate,xfce4")"
+        "bspwm (MagyArch),ratpoison (MagyArch),i3 (MagyArch),xmonad (MagyArch),herbstluftwm (MagyArch),spectrwm (MagyArch),gnome,plasma,mate,xfce4")"
 
 
     unset MAIN_LIST
@@ -2363,17 +2363,17 @@ install_run() {
 
     fi
 
-    # if [ "$de_set" = "herbstluftwm (MagyArch)" ]
-    # then
-    #     arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-    #     if [ "$VERSION" = "Test" ]
-    #     then
-    #         arch_chroot "git clone https://github.com/magyarch/magyarch-hlwm.git /mnt/mnt/etc/skel/"
-    #     else
-    #         arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-hlwm.git /mnt/mnt/etc/skel/"
-    #     fi
-    #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
-    # fi
+    if [ "$de_set" = "herbstluftwm (MagyArch)" ]
+    then
+        arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+        if [ "$VERSION" = "Test" ]
+        then
+            arch_chroot "git clone https://github.com/magyarch/magyarch-hlwm.git /mnt/mnt/etc/skel/"
+        else
+            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-hlwm.git /mnt/mnt/etc/skel/"
+        fi
+        arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
+    fi
 
     if [ "$de_set" = "i3 (MagyArch)" ]
     then
@@ -2399,16 +2399,16 @@ install_run() {
     #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
     # fi
 
-    # if [ "$de_set" = "spectrwm (MagyArch)" ]
-    # then
-    #     arch_chroot "mkdir -p /mnt/mnt/etc/skel"
-    #     if [ "$VERSION" = "Test" ]
-    #     then
-    #         arch_chroot "git clone https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
-    #     else
-    #         arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
-    #     fi
-    #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
+    if [ "$de_set" = "spectrwm (MagyArch)" ]
+    then
+        arch_chroot "mkdir -p /mnt/mnt/etc/skel"
+        if [ "$VERSION" = "Test" ]
+        then
+            arch_chroot "git clone https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
+        else
+            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
+        fi
+        arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
 
     # fi
 
@@ -2527,8 +2527,8 @@ install_run() {
 
     echo "# $INS005"
     arch_chroot "pacman -S --noconfirm --needed \
-        acpi apg b43-fwcutter brave-bin ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
-        networkmanager nerd-fonts-jetbrains-mono network-manager-applet nm-connection-editor wireplumber pamixer pipewire pipewire-alsa pipewire-pulse pipewire-jack \
+        acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
+        nerd-fonts-jetbrains-mono networkmanager network-manager-applet nm-connection-editor wireplumber pamixer pipewire pipewire-alsa pipewire-pulse pipewire-jack \
         python-ueberzug python-psutil python-requests python-wheel udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
 
@@ -2757,21 +2757,23 @@ install_run() {
     #then
      #   arch_chroot "pacman -S --noconfirm --needed ratpoison st libx11 libxinerama libxft freetype2 dmenu"
 
-    # elif [ "$de_set" = "spectrwm (MagyArch)" ]
-    # then
-    #     arch_chroot "pacman -S --noconfirm --needed \
-    #         alacritty firefox cifs-utils discord dmenu dunst exfat-utils expac feh firefox htop \
-    #         lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
-    #         rofi rxvt-unicode scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
-    #         ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip urxvt-perls vifm \
-    #         mctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
-    #         xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
-    #         zathura-pdf-poppler zathura-ps"
+    elif [ "$de_set" = "spectrwm (MagyArch)" ]
+    then
+        arch_chroot "pacman -S --noconfirm --needed \
+            alacritty firefox cifs-utils discord dmenu dunst exfat-utils expac feh firefox htop \
+            lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
+            rofi rxvt-unicode scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
+            ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip urxvt-perls vifm \
+            mctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
+            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
+            zathura-pdf-poppler zathura-ps"
 
-    #     #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
-    #     #arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
-    #     arch_chroot "rm -rf /mnt/mnt"
-    #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+        #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
+        #arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make install"
+        arch_chroot "rm -rf /mnt/mnt"
+        arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
     elif [ "$de_set" = "i3 (MagyArch)" ]
     then
@@ -2834,28 +2836,28 @@ install_run() {
     # then
     #     arch_chroot "pacman -S --noconfirm --needed herbstluftwm xorg-xsetroot dzen2 dmenu"
 
-    # elif [ "$de_set" = "herbstluftwm (MagyArch)" ]
-    # then
-    #     arch_chroot "pacman -S --noconfirm --needed \
-    #         alacritty atool firefox calcurse discord dmenu2 dzen2 expac herbstluftwm lf-bin maim mpc mpd mpv ncmpcpp \
-    #         neofetch neovim newsboat pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar rofi rxvt-unicode sublime-text-4 sxhkd \
-    #         sxiv ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip urxvt-perls vifm vim wmctrl wmctrl xcape \
-    #         xclip xdo xorg-xsetroot xwallpaper zathura zathura-pdf-poppler"
+    elif [ "$de_set" = "herbstluftwm (MagyArch)" ]
+    then
+        arch_chroot "pacman -S --noconfirm --needed \
+            alacritty atool firefox calcurse discord dmenu2 dzen2 expac herbstluftwm lf-bin maim mpc mpd mpv ncmpcpp \
+            neofetch neovim newsboat pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar rofi rxvt-unicode sublime-text-4 sxhkd \
+            sxiv ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip urxvt-perls vifm vim wmctrl wmctrl xcape \
+            xclip xdo xorg-xsetroot xwallpaper zathura zathura-pdf-poppler"
 
-    #     arch_chroot "rm -rf /mnt/mnt"
-    #     arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
-    #     arch_chroot "sed -i 's/Exec=herbstluftwm/Exec=herbstluftwm --locked/' /usr/share/xsessions/herbstluftwm.desktop"
+        arch_chroot "rm -rf /mnt/mnt"
+        arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
+        arch_chroot "sed -i 's/Exec=herbstluftwm/Exec=herbstluftwm --locked/' /usr/share/xsessions/herbstluftwm.desktop"
 
     elif [ "$de_set" = "xmonad (MagyArch)" ]
     then
         #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty arandr firefox calcurse discord docx2txt dosfstools dunst ed exfat-utils expac eww feh \
+            alacritty arandr firefox calcurse discord docx2txt dosfstools dunst ed exfat-utils expac feh \
             ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
             ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar-git \
             rofi scrot socat sublime-text-4 \
             sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
-            ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
+            ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan w3m wmctrl xcape xclip xdo xdo xdotool \
             xmobar xmonad xmonad-contrib xmonad-utils xmonad-log xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
             xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
