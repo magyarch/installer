@@ -2410,7 +2410,7 @@ install_run() {
         fi
         arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
 
-    # fi
+     fi
 
     # if [ "$de_set" = "xfce4 (MagyArch)" ]
     # then
