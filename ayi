@@ -2762,9 +2762,9 @@ install_run() {
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty firefox cifs-utils discord dmenu dunst exfat-utils expac feh firefox htop \
             lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
-            rofi rxvt-unicode scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
-            ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip urxvt-perls vifm \
-            mctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
+            rofi scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
+            ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip vifm \
+            wmctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
             xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
             zathura-pdf-poppler zathura-ps"
 
@@ -2839,11 +2839,13 @@ install_run() {
     elif [ "$de_set" = "herbstluftwm (MagyArch)" ]
     then
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty atool firefox calcurse discord dmenu2 dzen2 expac herbstluftwm lf-bin maim mpc mpd mpv ncmpcpp \
-            neofetch neovim newsboat pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar rofi rxvt-unicode sublime-text-4 sxhkd \
-            sxiv ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip urxvt-perls vifm vim wmctrl wmctrl xcape \
+            alacritty firefox calcurse discord expac herbstluftwm maim mpc mpd mpv ncmpcpp \
+            neofetch neovim newsboat pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar rofi sublime-text-4 sxhkd \
+            sxiv ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip vifm vim wmctrl xcape \
             xclip xdo xorg-xsetroot xwallpaper zathura zathura-pdf-poppler"
-
+        
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make install"
         arch_chroot "rm -rf /mnt/mnt"
         arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
         arch_chroot "sed -i 's/Exec=herbstluftwm/Exec=herbstluftwm --locked/' /usr/share/xsessions/herbstluftwm.desktop"
