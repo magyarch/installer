@@ -2760,12 +2760,12 @@ install_run() {
     elif [ "$de_set" = "spectrwm (MagyArch)" ]
     then
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty firefox cifs-utils discord dmenu dunst exfat-utils expac feh firefox htop \
-            lxappearance libxft-bgra maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
-            rofi scrot socat spectrwm-git sublime-text-4 sxhkd sxiv terminus-font \
-            ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip vifm \
+            alacritty discord dunst exfat-utils expac eww feh htop \
+            lxappearance maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
+            rofi scrot socat spectrwm-git sxhkd sxiv terminus-font \
+            ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip vifm \
             wmctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
-            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
+            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura \
             zathura-pdf-poppler zathura-ps"
 
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
