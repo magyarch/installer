@@ -2731,10 +2731,10 @@ install_run() {
     then
         #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty atool bc calcurse discord dzen2 docx2txt dosfstools dunst ed exfat-utils expac \
-            feh scrot ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
+            alacritty atool bc calcurse discord docx2txt dosfstools dunst ed exfat-utils expac \
+            feh scrot ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
             mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome \
-            rofi \
+            sxhkd rofi \
             socat sublime-text-4 sxiv task-spooler tree \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan \
             w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
@@ -2744,10 +2744,10 @@ install_run() {
         arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/st && make && make install"
         arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/dwm && make && make clean install"
         arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/slstatus && make && make install"
-        arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/dmenu && make && make clean install"
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/dmenu && make && make install"
         #arch_chroot "git clone https://github.com/magyarch/magyarch-dmenu.git /mnt/mnt/magyarch-dmenu; cd /mnt/mnt/magyarch-dmenu/magyarch-dmenu; make clean install"
         mkdir -p /mnt/usr/share/xsessions
-        echo -e "[Desktop Entry]\nName=DWM (MagyArch)\nComment=Dynamic window manager Session\nExec=/usr/local/bin/dwm\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/ratpoison.desktop
+        echo -e "[Desktop Entry]\nName=DWM (MagyArch)\nComment=Dynamic window manager Session\nExec=/usr/local/bin/dwm\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/dwm.desktop
         arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
         #arch_chroot "pacman -S --noconfirm --needed mst"
 
