@@ -2748,7 +2748,7 @@ install_run() {
         #arch_chroot "git clone https://github.com/magyarch/magyarch-dmenu.git /mnt/mnt/magyarch-dmenu; cd /mnt/mnt/magyarch-dmenu/magyarch-dmenu; make clean install"
         mkdir -p /mnt/usr/share/xsessions
         echo -e "[Desktop Entry]\nName=DWM (MagyArch)\nComment=Dynamic window manager Session\nExec=/usr/local/bin/dwm\nType=Application\nKeywords=wm;tiling" > /mnt/usr/share/xsessions/dwm.desktop
-        arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
+        #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
         #arch_chroot "pacman -S --noconfirm --needed mst"
 
         arch_chroot "rm -rf /mnt/mnt"
@@ -2844,7 +2844,7 @@ install_run() {
             neofetch neovim newsboat pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar rofi sublime-text-4 sxhkd \
             sxiv ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip vifm vim wmctrl xcape \
             xclip xdo xorg-xsetroot xwallpaper zathura zathura-pdf-poppler"
-        
+
         arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
         arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make install"
         arch_chroot "rm -rf /mnt/mnt"
