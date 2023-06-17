@@ -2417,7 +2417,7 @@ install_run() {
     #     sleep 2s
     #     if [ "$VERSION" = "Test" ]
     #     then
-    #     arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord sublime-text-4"
+    #     arch_chroot "pacman -S --noconfirm --need magyarch-xfce4 nano discord "
 
     # fi
 
@@ -2675,7 +2675,7 @@ install_run() {
     #         ed exfat-utils expac feh ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify \
     #         lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g \
     #         odt2txt pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome rofi rxvt-unicode rxvt-unicode scrot socat \
-    #         sublime-text-4 sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
+    #          sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
     #         ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
     #         urlscan urxvt-perls vicious w3m wmctrl xcape xclip xdo xdo xdotool xorg-server \
     #         xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git \
@@ -2716,7 +2716,7 @@ install_run() {
             exfat-utils expac feh ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify \
             lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat \
             ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar rofi rxvt-unicode rxvt-unicode scrot socat \
-            sublime-text-4 sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
+             sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
             urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
             xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git xwallpaper youtube-dl \
@@ -2735,13 +2735,13 @@ install_run() {
             feh scrot ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
             mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome \
             sxhkd rofi \
-            socat sublime-text-4 sxiv task-spooler tree \
+            socat  sxiv task-spooler tree \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan \
             w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
             xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
             zathura-pdf-poppler zathura-ps"
 
-        arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/st && make && make install"
+        #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/st && make && make install"
         arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/dwm && make && make clean install"
         arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/slstatus && make && make install"
         arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/dmenu && make && make install"
@@ -2804,7 +2804,7 @@ install_run() {
      #         ffmpeg fzf gnome-keyring highlight htop i3blocks i3-gaps imagemagick jq libnotify lxappearance \
      #         maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager ntfs-3g pavucontrol \
      #         pcmanfm-gtk3 picom-jonaburg-git polkit-gnome poppler polybar \
-     #         python-i3ipc rofi rxvt-unicode scrot socat sublime-text-4 sxhkd sxiv tree ttf-bitstream-vera \
+     #         python-i3ipc rofi rxvt-unicode scrot socat  sxhkd sxiv tree ttf-bitstream-vera \
      #         ttf-dejavu  ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter \
      #         unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
      #         xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-pdf-mupdf"
@@ -2825,7 +2825,7 @@ install_run() {
     #         ffmpeg fzf gnome-keyring gtop highlight htop imagemagick libnotify lxappearance maim maim mediainfo mpc \
     #         mpd mpv ncmpcpp neofetch neovim neovim networkmanager network-manager-applet newsboat odt2txt pavucontrol \
     #         pcmanfm-gtk3 picom-jonaburg-git-tryone-git polkit-gnome python-mpd2 python-psutil python-requests \
-    #         python-setuptools python-xlib qtile rofi rxvt-unicode rxvt-unicode scrot sublime-text-4 sxiv tree ttf-bitstream-vera \
+    #         python-setuptools python-xlib qtile rofi rxvt-unicode rxvt-unicode scrot  sxiv tree ttf-bitstream-vera \
     #         ttf-dejavu ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine unrar unzip urxvt-perls \
     #         w3m wmctrl xcape xcb-util-cursor xclip xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop \
     #         xorg-xsetroot xorg-xwininfo zathura zathura-djvu zathura-pdf-poppler zathura-ps"
@@ -2841,7 +2841,7 @@ install_run() {
     then
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty firefox calcurse discord expac herbstluftwm maim mpc mpd mpv ncmpcpp \
-            neofetch neovim newsboat pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar rofi sublime-text-4 sxhkd \
+            neofetch neovim newsboat pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar rofi  sxhkd \
             sxiv ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip vifm vim wmctrl xcape \
             xclip xdo xorg-xsetroot xwallpaper zathura zathura-pdf-poppler"
 
@@ -2858,7 +2858,7 @@ install_run() {
             alacritty arandr firefox calcurse discord docx2txt dosfstools dunst ed exfat-utils expac feh \
             ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
             ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar-git \
-            rofi scrot socat sublime-text-4 \
+            rofi scrot socat  \
             sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
             ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan w3m wmctrl xcape xclip xdo xdo xdotool \
             xmobar xmonad xmonad-contrib xmonad-utils xmonad-log xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
@@ -2877,7 +2877,7 @@ install_run() {
     #         alacritty arandr firefox calcurse discord dmenu2 docx2txt dosfstools dunst ed exfat-utils expac feh \
     #         ffmpeg firefox fzf gnome-keyring haskell-dbus highlight htop imagemagick libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
     #         ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar \
-    #         rofi rxvt-unicode rxvt-unicode scrot socat sublime-text-4 \
+    #         rofi rxvt-unicode rxvt-unicode scrot socat  \
     #         sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
     #         ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdo xdotool \
     #         xmonad xmonad-contrib xmonad-log xmonad-utils xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
