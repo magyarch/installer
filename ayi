@@ -2529,7 +2529,7 @@ install_run() {
     arch_chroot "pacman -S --noconfirm --needed \
         acpi apg b43-fwcutter ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
         nerd-fonts-jetbrains-mono networkmanager network-manager-applet nm-connection-editor wireplumber pamixer pipewire pipewire-alsa pipewire-pulse pipewire-jack \
-        python-ueberzug python-psutil python-requests python-wheel udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
+        python-ueberzug python-psutil python-requests python-wheel paru-bin vifm udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
 
     cp /installer/lsb-release /mnt/etc/
@@ -2537,7 +2537,7 @@ install_run() {
     # aur_hlp="cd /home/${user_name} ; su ${user_name} -c 'git clone https://aur.archlinux.org/yay-bin' ; cd yay-bin ; su ${user_name} -c 'makepkg' ; pacman -U yay-bin*x86_64* --noconfirm ; cd .. ; rm -rf yay-bin"
 
     # arch_chroot "cd /home/${user_name} ; su ${user_name} -c 'git clone https://aur.archlinux.org/yay-bin' ; cd yay-bin ; su ${user_name} -c 'makepkg' ; pacman -U yay-bin*x86_64* --noconfirm ; cd .. ; rm -rf yay-bin"
-    arch_chroot "pacman -S paru-bin bat vifm tdrop-git --needed --noconfirm"
+    arch_chroot "pacman -S paru-bin bat vifm --needed --noconfirm"
     arch_chroot "sed -i 's/#BottomUp/BottomUp/' /etc/paru.conf"
     arch_chroot "sed -i 's|BottomUp|& \nSkipReview|' /etc/paru.conf"
     arch_chroot "sed -i 's/#Color/Color/' /etc/pacman.conf"
@@ -2715,7 +2715,7 @@ install_run() {
             alacritty bc firefox bspwm calcurse discord docx2txt dosfstools dunst ed \
             exfat-utils expac feh ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify \
             lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat \
-            ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar rofi rxvt-unicode rxvt-unicode scrot socat \
+            ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 paru-bin picom-jonaburg-git polkit-gnome polybar rofi rxvt-unicode rxvt-unicode scrot socat \
              sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
             urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
@@ -2737,7 +2737,7 @@ install_run() {
             sxhkd rofi \
             socat  sxiv task-spooler tree \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan \
-            w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
+            w3m wmctrl paru-bin xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
             xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
             zathura-pdf-poppler zathura-ps"
 
@@ -2763,7 +2763,7 @@ install_run() {
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty discord dunst exfat-utils expac eww feh htop \
             lxappearance maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar\
-            rofi scrot socat spectrwm-git sxhkd sxiv terminus-font \
+            rofi scrot socat spectrwm-git sxhkd sxiv paru-bin terminus-font \
             ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip vifm \
             wmctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
             xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura \
@@ -2785,7 +2785,7 @@ install_run() {
             ffmpeg fzf gnome-keyring geany highlight htop i3-wm i3blocks imagemagick jq libnotify lxappearance \
             maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager ntfs-3g pavucontrol \
             pcmanfm-gtk3 picom-jonaburg-git polkit-gnome  \
-            python-i3ipc rofi scrot socat sxhkd sxiv tree ttf-bitstream-vera \
+            python-i3ipc rofi scrot socat sxhkd sxiv tree paru-bin vifm ttf-bitstream-vera \
             ttf-dejavu ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter \
             unrar unzip urlscan w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
             xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-pdf-poppler"
@@ -2842,7 +2842,7 @@ install_run() {
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty firefox calcurse discord expac herbstluftwm maim mpc mpd mpv ncmpcpp \
             neofetch neovim newsboat pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar rofi  sxhkd \
-            sxiv ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip vifm vim wmctrl xcape \
+            sxiv vifm paru-bin ttf-font-awesome-4 ttf-jetbrains-mono ttf-joypixels unrar unzip vifm vim wmctrl xcape \
             xclip xdo xorg-xsetroot xwallpaper zathura zathura-pdf-poppler"
 
         arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
@@ -2859,7 +2859,7 @@ install_run() {
             ffmpeg firefox fzf gnome-keyring highlight htop imagemagick libnotify lxappearance magyarch_xmonad_pacman_hook maim mediainfo mpc mpd mpv \
             ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 picom-jonaburg-git polkit-gnome polybar-git \
             rofi scrot socat  \
-            sxhkd sxiv ttf-font-awesome-4 ttf-jetbrains-mono \
+            sxhkd sxiv vifm paru-bin ttf-font-awesome-4 ttf-jetbrains-mono \
             ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan w3m wmctrl xcape xclip xdo xdo xdotool \
             xmobar xmonad xmonad-contrib xmonad-utils xmonad-log xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo \
             xwallpaper youtube-dl zathura zathura-djvu zathura-pdf-poppler zathura-ps"
