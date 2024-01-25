@@ -2719,7 +2719,7 @@ install_run() {
              sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
             urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
-            xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git xwallpaper youtube-dl \
+            xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git xwallpaper  \
             zathura zathura-djvu zathura-pdf-poppler zathura-ps"
 
         arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
@@ -2738,7 +2738,7 @@ install_run() {
             socat  sxiv task-spooler tree \
             ttf-font-awesome-4 ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan \
             w3m wmctrl paru-bin xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
-            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-djvu \
+            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper zathura zathura-djvu \
             zathura-pdf-poppler zathura-ps"
 
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/suckless/st && make && make install"
@@ -2766,7 +2766,7 @@ install_run() {
             rofi scrot socat spectrwm-git sxhkd sxiv paru-bin terminus-font \
             ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels urlscan unclutter unrar unzip vifm \
             wmctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
-            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura \
+            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper zathura \
             zathura-pdf-poppler zathura-ps"
 
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
@@ -2782,13 +2782,13 @@ install_run() {
 
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty firefox calcurse discord dosfstools dunst ed exfat-utils expac feh \
-            ffmpeg fzf gnome-keyring geany highlight htop i3-wm i3blocks imagemagick jq libnotify lxappearance \
+            ffmpeg fzf gnome-keyring geany highlight htop i3-wm  imagemagick jq libnotify lxappearance \
             maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager ntfs-3g pavucontrol \
             pcmanfm-gtk3 picom-jonaburg-git polkit-gnome  \
             python-i3ipc rofi scrot socat sxhkd sxiv tree paru-bin vifm ttf-bitstream-vera \
             ttf-dejavu ttf-jetbrains-mono nerd-fonts-jetbrains-mono ttf-joypixels ttf-linux-libertine unclutter \
             unrar unzip urlscan w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
-            xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper youtube-dl zathura zathura-pdf-poppler"
+            xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper  zathura zathura-pdf-poppler"
 
         arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
         arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make install"
