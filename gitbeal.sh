@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # installing git if not installed for specific distro's
 
