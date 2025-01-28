@@ -2785,11 +2785,11 @@ install_run() {
             hyprland wlroots wayland alacritty firefox discord dosfstools exfat-utils expac \
             ffmpeg fzf wayland-protocols waybar wlogout hyprland-protocols mako jq libnotify \
             mediainfo mpc mpd mpv ncmpcpp fastfetch neovim networkmanager ntfs-3g pavucontrol \
-            pcmanfm-gtk3 polkit-gnome \
-            rofi-wayland pyprland paru-bin vifm ttf-bitstream-vera \
-            ttf-dejavu ttf-jetbrains-mono ttf-joypixels ttf-linux-libertine \
+            polkit-gnome thunar-archive-plugin thunar-volman thunar-media-tags-plugin \
+            rofi-wayland pyprland paru-bin vifm ttf-bitstream-vera ttf-font-awesome \
+            ttf-dejavu ttf-jetbrains-mono-nerd \
             unrar unzip urlscan xdg-desktop-portal-hyprland \
-            swww slurp wlr-randr grim wl-clipboard wofi wlsunset zathura zathura-pdf-poppler"
+            swww slurp wlr-randr grim wl-clipboard wofi wlsunset"
 
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make install"
