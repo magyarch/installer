@@ -2783,11 +2783,11 @@ install_run() {
 
         arch_chroot "pacman -S --noconfirm --needed \
             hyprland wlroots wayland alacritty firefox discord dosfstools exfat-utils expac \
-            ffmpeg fzf wayland-protocols waybar wlogout hyprland-protocols mako jq libnotify \
+            ffmpeg fzf wayland-protocols waybar wlogout hyprland-protocols hyprshot mako jq libnotify \
             mediainfo mpc mpd mpv ncmpcpp fastfetch neovim networkmanager ntfs-3g pavucontrol \
             polkit-gnome thunar-archive-plugin thunar-volman thunar-media-tags-plugin \
             rofi-wayland pyprland paru-bin vifm ttf-bitstream-vera ttf-font-awesome \
-            ttf-dejavu ttf-jetbrains-mono-nerd \
+            ttf-dejavu ttf-jetbrains-mono-nerd nwg-look \
             unrar unzip urlscan xdg-desktop-portal-hyprland \
             swww slurp wlr-randr grim wl-clipboard wofi wlsunset"
 
