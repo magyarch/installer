@@ -2788,7 +2788,7 @@ install_run() {
             polkit-gnome thunar-archive-plugin thunar-volman thunar-media-tags-plugin \
             rofi-wayland pyprland paru-bin vifm ttf-bitstream-vera ttf-font-awesome \
             ttf-dejavu ttf-jetbrains-mono-nerd nwg-look \
-            unrar unzip urlscan xdg-desktop-portal-hyprland \
+            unrar unzip urlscan steam lutris xdg-desktop-portal-hyprland \
             swww slurp wlr-randr grim wl-clipboard wofi wlsunset"
 
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
