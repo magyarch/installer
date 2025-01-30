@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),dwm (MagyArch),hyprland (MagyArch),spectrwm (MagyArch),gnome,plasma,mate,xfce4")"
+        "bspwm (MagyArch),dwm (MagyArch),hyprland (MagyArch),spectrwm (MagyArch),gnome,plasma,cosmic,xfce4")"
 
 
     unset MAIN_LIST
@@ -2697,9 +2697,9 @@ install_run() {
 
         # arch_chroot "rm -rf /mnt/mnt"
 
-    elif [ "$de_set" = "mate" ]
+    elif [ "$de_set" = "cosmic" ]
     then
-        arch_chroot "pacman -S --noconfirm --needed mate mate-extra "
+        arch_chroot "pacman -S --noconfirm --needed cosmic "
 
     # elif [ "$de_set" = "bspwm" ]
     # then
