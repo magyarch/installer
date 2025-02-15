@@ -2764,11 +2764,10 @@ install_run() {
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty discord dunst exfat-utils expac eww feh htop \
             lxappearance maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
-            rofi scrot socat spectrwm-git sxhkd sxiv paru-bin terminus-font \
+            rofi scrot socat spectrwm sxhkd sxiv paru-bin terminus-font \
             ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels urlscan unclutter unrar unzip vifm \
             wmctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
-            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper zathura \
-            zathura-pdf-poppler zathura-ps"
+            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper"
 
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
         #arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
