@@ -2528,7 +2528,7 @@ install_run() {
 
     echo "# $INS005"
     arch_chroot "pacman -S --noconfirm --needed \
-        acpi apg ddrescue gvfs gvfs-mtp jq lsb-release man-db mc neofetch \
+        acpi apg ddrescue gvfs gvfs-mtp jq lsb-release man-db mc \
         networkmanager network-manager-applet nm-connection-editor wireplumber pamixer pipewire pipewire-alsa pipewire-pulse pipewire-jack \
         python-psutil python-requests python-wheel steam lutris wine-staging paru-bin vifm udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
@@ -2715,7 +2715,7 @@ install_run() {
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty bc firefox bspwm calcurse discord docx2txt dosfstools dunst ed \
             exfat-utils expac feh ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify \
-            lxappearance maim mediainfo mpc mpd mpv ncmpcpp neofetch neovim networkmanager newsboat \
+            lxappearance maim mediainfo mpc mpd mpv ncmpcpp neovim networkmanager newsboat \
             ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 paru-bin polkit-gnome polybar rofi rxvt-unicode rxvt-unicode scrot socat \
              sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
@@ -2734,7 +2734,7 @@ install_run() {
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty calcurse discord docx2txt dosfstools dunst ed exfat-utils expac \
             feh scrot ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
-            mpv ncmpcpp neofetch neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 polkit-gnome \
+            mpv ncmpcpp neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 polkit-gnome \
             sxhkd rofi \
             socat  sxiv task-spooler tree \
             ttf-font-awesome-4 ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan \
@@ -2763,7 +2763,7 @@ install_run() {
     then
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty discord dunst exfat-utils expac eww feh htop \
-            lxappearance maim mediainfo mpd mpv ncmpcpp neofetch neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
+            lxappearance maim mediainfo mpd mpv ncmpcpp neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
             rofi scrot socat spectrwm sxhkd sxiv paru-bin terminus-font \
             ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels urlscan unclutter unrar unzip vifm \
             wmctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
