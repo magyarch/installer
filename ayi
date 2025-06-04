@@ -2781,7 +2781,7 @@ install_run() {
         #ch_chroot "pacman -S --noconfirm --needed  "
 
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty kitty firefox discord dosfstools exfat-utils expac \
+            alacritty adobe-source-code-pro-fonts kitty firefox discord dosfstools exfat-utils expac \
             ffmpeg fzf  hyprshot mako jq libnotify \
             mediainfo mpc mpd mpv ncmpcpp fastfetch neovim networkmanager ntfs-3g pavucontrol \
             polkit-gnome thunar-archive-plugin thunar-volman thunar-media-tags-plugin \
