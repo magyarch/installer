@@ -2713,15 +2713,15 @@ install_run() {
     then
         #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
-            alacritty bc firefox bspwm calcurse discord docx2txt dosfstools dunst ed \
+            alacritty bc firefox discord docx2txt dosfstools dunst ed \
             exfat-utils expac feh ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify \
             lxappearance maim mediainfo mpc mpd mpv ncmpcpp neovim networkmanager newsboat \
-            ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 paru-bin polkit-gnome polybar rofi rxvt-unicode rxvt-unicode scrot socat \
-             sxhkd sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
+            ntfs-3g odt2txt pavucontrol paru-bin polkit-gnome polybar rofi scrot socat \
+             sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
             urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
             xorg-xdpyinfo xorg-xinit xorg-xprop xorg-xsetroot xorg-xwininfo xtitle-git xwallpaper  \
-            zathura zathura-djvu zathura-pdf-poppler zathura-ps"
+            bspwm sxhkd"
 
         arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
         arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make install"
@@ -2781,14 +2781,14 @@ install_run() {
         #ch_chroot "pacman -S --noconfirm --needed  "
 
         arch_chroot "pacman -S --noconfirm --needed \
-            hyprland wlroots wayland alacritty kitty firefox discord dosfstools exfat-utils expac \
-            ffmpeg fzf wayland-protocols waybar wlogout hyprland-protocols hyprshot mako jq libnotify \
+            alacritty kitty firefox discord dosfstools exfat-utils expac \
+            ffmpeg fzf  hyprshot mako jq libnotify \
             mediainfo mpc mpd mpv ncmpcpp fastfetch neovim networkmanager ntfs-3g pavucontrol \
             polkit-gnome thunar-archive-plugin thunar-volman thunar-media-tags-plugin \
-            rofi-wayland pyprland paru-bin vifm ttf-bitstream-vera ttf-font-awesome \
+            pyprland paru-bin vifm ttf-bitstream-vera ttf-font-awesome \
             ttf-dejavu ttf-jetbrains-mono-nerd nwg-look \
             unrar unzip urlscan steam lutris wine-staging xdg-desktop-portal-hyprland \
-            swww slurp wlr-randr grim wl-clipboard wofi wlsunset"
+            swww slurp wlroots-git wayland wayland-protocols hyprland hyprland-protocols wlr-randr waybar wlogout grim wl-clipboard wofi wlsunset"
 
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
         #arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make install"
