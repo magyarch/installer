@@ -2716,7 +2716,7 @@ install_run() {
             alacritty bc firefox discord docx2txt dosfstools dunst ed \
             exfat-utils expac feh ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify \
             lxappearance maim mediainfo mpc mpd mpv ncmpcpp neovim networkmanager newsboat \
-            ntfs-3g odt2txt pavucontrol paru-bin polkit-gnome polybar rofi scrot socat \
+            ntfs-3g odt2txt pavucontrol picom-pijulius-next-git paru-bin polkit-gnome polybar rofi scrot socat \
              sxiv task-spooler tree ttf-bitstream-vera ttf-dejavu \
             ttf-font-awesome-4 ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels ttf-linux-libertine unclutter unrar unzip \
             urlscan urxvt-perls w3m wmctrl xcape xclip xdo xdotool xorg-server xorg-xbacklight \
