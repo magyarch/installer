@@ -2077,8 +2077,8 @@ install_run() {
         echo "# $CRUEFI"
         dd if=/dev/zero of="$dev" bs=512 count=1
         Parted "mklabel gpt"
-        Parted "mkpart primary fat32 1MiB 513MiB"
-        Parted "mkpart primary ext4 513MiB 100%"
+        Parted "mkpart primary fat32 1MiB 1025MiB"
+        Parted "mkpart primary ext4 1025MiB 100%"
         Parted "set 1 boot on"
         mkfs.fat -F32 "$gpt_part"
         mkfs.ext4 -F "$root_part"
@@ -2528,7 +2528,7 @@ install_run() {
 
     echo "# $INS005"
     arch_chroot "pacman -S --noconfirm --needed \
-        acpi apg ddrescue fastfetch gvfs gvfs-mtp jq lsb-release man-db mc \
+        acpi apg adobe-source-code-pro-fonts ddrescue fastfetch gvfs gvfs-mtp jq lsb-release man-db mc \
         networkmanager network-manager-applet nm-connection-editor wireplumber pamixer pipewire pipewire-alsa pipewire-pulse pipewire-jack \
         python-psutil python-requests python-wheel steam lutris wine-staging paru-bin vifm udiskie xdg-user-dirs xdg-utils xf86-input-libinput xf86-input-synaptics xf86-video-fbdev \
         xorg-apps xorg-server xorg-twm xorg-xinit xterm wget"
@@ -2733,8 +2733,8 @@ install_run() {
         #ch_chroot "pacman -S --noconfirm --needed  "
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty calcurse discord docx2txt dosfstools dunst ed exfat-utils expac \
-            feh scrot ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd \
-            mpv ncmpcpp neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 polkit-gnome \
+            feh scrot ffmpeg fzf gnome-keyring highlight htop imagemagick libnotify lxappearance maim mediainfo mpc mpd ueberzug \
+            mpv ncmpcpp neovim networkmanager newsboat ntfs-3g odt2txt pavucontrol pcmanfm-gtk3 polkit-gnome picom-pijulius-next-git \
             sxhkd rofi \
             socat  sxiv task-spooler tree \
             ttf-font-awesome-4 ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels ttf-linux-libertine unclutter unrar unzip urlscan \
