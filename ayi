@@ -689,7 +689,7 @@ dm_desktop_set() {
         --field="$DMDE001":CB \
         --field="$DMDE002":CB \
         "^lightdm,lxdm,sddm,gdm,${DEFAULT}" \
-        "bspwm (MagyArch),dwm (MagyArch),hyprland (MagyArch),spectrwm (MagyArch),gnome,plasma,cosmic,xfce4")"
+        "bspwm (MagyArch),dwm (MagyArch),hyprland (MagyArch),ratpoison (MagyArch),gnome,plasma,cosmic,xfce4")"
 
 
     unset MAIN_LIST
@@ -2400,14 +2400,14 @@ install_run() {
     #     arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
     # fi
 
-    if [ "$de_set" = "spectrwm (MagyArch)" ]
+    if [ "$de_set" = "ratpoison (MagyArch)" ]
     then
         arch_chroot "mkdir -p /mnt/mnt/etc/skel"
         if [ "$VERSION" = "Test" ]
         then
-            arch_chroot "git clone https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
+            arch_chroot "git clone https://github.com/magyarch/magyarch-ratpoison.git /mnt/mnt/etc/skel/"
         else
-            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-spectrwm.git /mnt/mnt/etc/skel/"
+            arch_chroot "git clone -b $VERSION https://github.com/magyarch/magyarch-ratpoison.git /mnt/mnt/etc/skel/"
         fi
         arch_chroot "cp -rfT /mnt/mnt/etc/skel/ /etc/skel/"
 
@@ -2759,12 +2759,12 @@ install_run() {
     #then
      #   arch_chroot "pacman -S --noconfirm --needed ratpoison st libx11 libxinerama libxft freetype2 dmenu"
 
-    elif [ "$de_set" = "spectrwm (MagyArch)" ]
+    elif [ "$de_set" = "ratpoison (MagyArch)" ]
     then
         arch_chroot "pacman -S --noconfirm --needed \
             alacritty discord dunst exfat-utils expac eww feh htop \
             lxappearance maim mediainfo mpd mpv ncmpcpp neovim newsboat ntfs-3g pavucontrol pcmanfm-gtk3 picom polkit-gnome polybar\
-            rofi scrot socat spectrwm sxhkd sxiv paru-bin terminus-font \
+            rofi scrot socat ratpoison dzen2 polybar libx11 libxft freetype2 sxiv paru-bin terminus-font \
             ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels urlscan unclutter unrar unzip vifm \
             wmctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
             xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper"
@@ -2772,7 +2772,7 @@ install_run() {
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
         #arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
         arch_chroot "cd /mnt/mnt/etc/skel/.config/dmenu && make install"
-        arch_chroot "cd /mnt/mnt/etc/skel/.config/tabbed && make install"
+        arch_chroot "cd /mnt/mnt/etc/skel/.config/st && make install"
         arch_chroot "rm -rf /mnt/mnt"
         arch_chroot "cd /home/$user_name/; rm -rf .git/ LICENSE README.md git.sh setup-git.sh "
 
