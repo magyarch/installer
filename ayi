@@ -2767,7 +2767,7 @@ install_run() {
             rofi scrot socat ratpoison dzen2 polybar libx11 libxft freetype2 sxiv paru-bin terminus-font \
             ttf-jetbrains-mono ttf-jetbrains-mono-nerd ttf-joypixels urlscan unclutter unrar unzip vifm \
             wmctrl xcb-util-keysyms xcape xclip xdo xdotool xorg-server xorg-xbacklight xorg-xdpyinfo xorg-xinit \
-            xorg-xprop xorg-xsetroot xorg-xwininfo xwallpaper"
+            xorg-xprop xorg-xsetroot xorg-xmodmap xorg-xwininfo xwallpaper"
 
         #arch_chroot "LANG=C ; yes | pacman -S libxft-bgra "
         #arch_chroot "git clone https://github.com/bazeeel/st.git /mnt/mnt/st; cd /mnt/mnt/st; make clean install"
